@@ -6,7 +6,7 @@ namespace PongGameWithFuzzyLogic.Models
 {
     public class Ball : Sprite
     {
-        public Ball(SpriteBatch spriteBatch, Texture2D texture) : base(spriteBatch, texture)
+        public Ball(Texture2D texture) : base(texture)
         {
             Scale = 0.3f;
 

@@ -4,7 +4,7 @@ namespace PongGameWithFuzzyLogic.Models
 {
     public abstract class Racket : Sprite
     {
-        public Racket(SpriteBatch spriteBatch, Texture2D texture) : base(spriteBatch, texture)
+        public Racket(Texture2D texture) : base(texture)
         {
             Scale = 0.2f;
         }

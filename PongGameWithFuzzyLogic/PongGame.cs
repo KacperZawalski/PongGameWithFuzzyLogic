@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
 using PongGameWithFuzzyLogic.Models;
+using PongGameWithFuzzyLogic.UiComponents;
 using System;
 using System.Collections.Generic;
 
@@ -12,7 +12,8 @@ namespace PongGameWithFuzzyLogic
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
         private ContentLoader _contentLoader;
-        private List<Sprite> _sprites;
+        private ViewManager _viewManager;
+        private SpritesManager _spritesManager;
 
         public PongGame()
         {
@@ -24,24 +25,24 @@ namespace PongGameWithFuzzyLogic
         protected override void Initialize()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            _contentLoader = new ContentLoader(this, _spriteBatch);
+            Components.Add(_contentLoader = new ContentLoader(this));
+            Components.Add(_viewManager = new ViewManager(this));
+            Components.Add(_spritesManager = new SpritesManager(this));
 
             base.Initialize();
         }
 
 
         protected override void LoadContent()
-        { 
-            _contentLoader.LoadContent();
-            _sprites = _contentLoader.GetSprites();
+        {
+            _spritesManager.Sprites = _contentLoader.GetSprites();
         }
 
         protected override void Update(GameTime gameTime)
         {
-            foreach (var sprite in _sprites)
-            {
-                sprite.Update(gameTime);
-            }
+            _viewManager.UpdateComponents(gameTime);
+            _spritesManager.UpdateSprites(gameTime);
+
             base.Update(gameTime);
         }
 
@@ -50,10 +51,8 @@ namespace PongGameWithFuzzyLogic
             GraphicsDevice.Clear(Color.DarkGray);
             _spriteBatch.Begin();
 
-            foreach (var sprite in _sprites)
-            {
-                sprite.Draw(gameTime);
-            }
+            _viewManager.DrawComponents(gameTime, _spriteBatch);
+            _spritesManager.DrawSprites(gameTime, _spriteBatch);
 
             _spriteBatch.End();
             base.Draw(gameTime);

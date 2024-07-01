@@ -5,7 +5,7 @@ namespace PongGameWithFuzzyLogic.Models
 {
     public class TopRacket : Racket
     {
-        public TopRacket(SpriteBatch spriteBatch, Texture2D texture) : base(spriteBatch, texture)
+        public TopRacket(Texture2D texture) : base(texture)
         {
         }
 

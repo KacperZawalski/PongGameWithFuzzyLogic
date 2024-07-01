@@ -1,23 +1,18 @@
-﻿using Microsoft.Xna.Framework.Graphics;
-using System;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 
 namespace PongGameWithFuzzyLogic.Models
 {
-    public sealed class ContentLoader
+    public sealed class ContentLoader : IGameComponent
     {
-        public List<Sprite> sprites = new List<Sprite>();
+        public List<Sprite> Sprites = new List<Sprite>();
+        private readonly List<string> _fontNames = new List<string>();
         private readonly PongGame _pongGame;
-        private SpriteBatch _spriteBatch;
-
-        public ContentLoader()
-        {
-        }
-
-        public ContentLoader(PongGame pongGame, SpriteBatch spriteBatch)
+        public ContentLoader(PongGame pongGame)
         {
             _pongGame = pongGame;
-            _spriteBatch = spriteBatch;
+            _fontNames.Add("defaultFont");
         }
 
         public void LoadContent()
@@ -26,25 +21,30 @@ namespace PongGameWithFuzzyLogic.Models
             LoadRackets();
         }
 
+        public List<Sprite> GetSprites()
+        {
+            return Sprites;
+        }
         private void LoadBall()
         {
             var ballTexture = _pongGame.Content.Load<Texture2D>("ball");
 
-            sprites.Add(new Ball(_spriteBatch, ballTexture));
+            Sprites.Add(new Ball(ballTexture));
         }
         private void LoadRackets()
         {
             var racketTexture = _pongGame.Content.Load<Texture2D>("racket");
 
-            Racket topRacket = new TopRacket(_spriteBatch, racketTexture);
-            Racket bottomRacket = new BottomRacket(_spriteBatch, racketTexture);
+            Racket topRacket = new TopRacket(racketTexture);
+            Racket bottomRacket = new BottomRacket(racketTexture);
 
-            sprites.Add(topRacket);
-            sprites.Add(bottomRacket);
+            Sprites.Add(topRacket);
+            Sprites.Add(bottomRacket);
         }
-        public List<Sprite> GetSprites()
+
+        public void Initialize()
         {
-            return sprites;
+            LoadContent();
         }
     }
 }
