@@ -16,7 +16,10 @@ namespace PongGameWithFuzzyLogic.Models
             _spriteBatch = spriteBatch;
             _texture = texture;
         }
-        public abstract void Draw(GameTime gameTime);
+        public void Draw(GameTime gameTime)
+        {
+            _spriteBatch.Draw(_texture, Position, null, Color.White, 0, Vector2.Zero, Scale, SpriteEffects.None, 0);
+        }
         public abstract void Update(GameTime gameTime);
     }
 }

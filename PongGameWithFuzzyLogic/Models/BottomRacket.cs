@@ -3,20 +3,19 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace PongGameWithFuzzyLogic.Models
 {
-    public sealed class Player : Sprite
+    public class BottomRacket : Racket
     {
-        public Player(SpriteBatch spriteBatch, Texture2D texture) : base(spriteBatch, texture)
+        public BottomRacket(SpriteBatch spriteBatch, Texture2D texture) : base(spriteBatch, texture)
         {
         }
 
-        public override void Draw(GameTime gameTime)
+        public override void SetDefaultPosition()
         {
             throw new System.NotImplementedException();
         }
 
         public override void Update(GameTime gameTime)
         {
-            throw new System.NotImplementedException();
         }
     }
 }

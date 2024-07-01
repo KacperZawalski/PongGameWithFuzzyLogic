@@ -8,12 +8,9 @@ namespace PongGameWithFuzzyLogic.Models
     {
         public Ball(SpriteBatch spriteBatch, Texture2D texture) : base(spriteBatch, texture)
         {
-        }
-        public override void Draw(GameTime gameTime)
-        {
-            _spriteBatch.Draw(_texture, Position, null, Color.White, 0, Vector2.Zero, Scale, SpriteEffects.None, 0);
-        }
+            Scale = 0.3f;
 
+        }
         public override void Update(GameTime gameTime)
         {
         }

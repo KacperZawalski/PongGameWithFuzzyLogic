@@ -23,17 +23,25 @@ namespace PongGameWithFuzzyLogic.Models
         public void LoadContent()
         {
             LoadBall();
+            LoadRackets();
         }
 
         private void LoadBall()
         {
             var ballTexture = _pongGame.Content.Load<Texture2D>("ball");
 
-            Ball ball = new Ball(_spriteBatch, ballTexture);
-            ball.Scale = 0.5f;
-            sprites.Add(ball);
+            sprites.Add(new Ball(_spriteBatch, ballTexture));
         }
+        private void LoadRackets()
+        {
+            var racketTexture = _pongGame.Content.Load<Texture2D>("racket");
 
+            Racket topRacket = new TopRacket(_spriteBatch, racketTexture);
+            Racket bottomRacket = new BottomRacket(_spriteBatch, racketTexture);
+
+            sprites.Add(topRacket);
+            sprites.Add(bottomRacket);
+        }
         public List<Sprite> GetSprites()
         {
             return sprites;

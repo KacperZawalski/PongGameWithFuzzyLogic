@@ -1,0 +1,3 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/Kacper/Desktop/Projekty/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/ball.png","C:/Users/Kacper/Desktop/Projekty/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/bin/DesktopGL/ball.xnb","TextureProcessor","Texture2DContent",1704,40085,0.2118075
+"C:/Users/Kacper/Desktop/Projekty/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/racket.png","C:/Users/Kacper/Desktop/Projekty/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/bin/DesktopGL/racket.xnb","TextureProcessor","Texture2DContent",700,400085,0.01708
