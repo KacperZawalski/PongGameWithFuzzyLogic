@@ -2,8 +2,6 @@
 using Microsoft.Xna.Framework.Graphics;
 using PongGameWithFuzzyLogic.Models;
 using PongGameWithFuzzyLogic.UiComponents;
-using System;
-using System.Collections.Generic;
 
 namespace PongGameWithFuzzyLogic
 {

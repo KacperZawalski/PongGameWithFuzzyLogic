@@ -19,7 +19,7 @@ namespace PongGameWithFuzzyLogic.UiComponents
                 case TextPosition.Left:
                     return new Vector2(horizontalLeft, verticalCenter);
                 case TextPosition.Right:
-                    return new Vector2 (horizontalRight, verticalCenter);
+                    return new Vector2(horizontalRight, verticalCenter);
                 default:
                     return new Vector2(horizontalCenter, verticalCenter);
             }

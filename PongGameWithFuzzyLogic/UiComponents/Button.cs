@@ -7,23 +7,23 @@ namespace PongGameWithFuzzyLogic.UiComponents
 {
     public class Button : Component
     {
-        public new Color Color 
+        public new Color Color
         {
-            get => _color; 
+            get => _color;
             set
             {
                 _color = value;
                 _colorCopy = value;
-            } 
+            }
         }
         public int PaddingTop { get; set; }
         public int PaddingLeft { get; set; }
         public TextPosition TextPosition { get; set; }
         public SpriteFont Font { get; set; }
         public string Text { get; set; }
-        public Color TextColor 
+        public Color TextColor
         {
-            get => _textColor; 
+            get => _textColor;
             set
             {
                 _textColor = value;
@@ -60,7 +60,7 @@ namespace PongGameWithFuzzyLogic.UiComponents
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             DrawRectangle(spriteBatch);
-            DrawText(spriteBatch);         
+            DrawText(spriteBatch);
         }
 
         public override void Update(GameTime gameTime)
@@ -85,10 +85,10 @@ namespace PongGameWithFuzzyLogic.UiComponents
         private void DrawText(SpriteBatch spriteBatch)
         {
             Vector2 newTextPosition = TextPositionHelper.CalculateTextPosition(
-                TextPosition, 
-                Font, 
-                Position, 
-                new Vector2(PaddingLeft, PaddingTop), 
+                TextPosition,
+                Font,
+                Position,
+                new Vector2(PaddingLeft, PaddingTop),
                 Text,
                 _texture);
 
@@ -98,9 +98,9 @@ namespace PongGameWithFuzzyLogic.UiComponents
         private bool IsMouseHovering()
         {
             MouseState mouseState = Mouse.GetState();
-            return Position.X < mouseState.X 
-                && Position.Y < mouseState.Y 
-                && Position.X + Dimensions.X > mouseState.X 
+            return Position.X < mouseState.X
+                && Position.Y < mouseState.Y
+                && Position.X + Dimensions.X > mouseState.X
                 && Position.Y + Dimensions.Y > mouseState.Y;
         }
         private void SetHoverStyling()
@@ -113,6 +113,6 @@ namespace PongGameWithFuzzyLogic.UiComponents
             _color = _colorCopy;
             _textColor = _textColorCopy;
         }
-       
+
     }
 }
