@@ -23,6 +23,7 @@ namespace PongGameWithFuzzyLogic.UiComponents
         {
             Button button = new Button(_font, new Vector2(100, 100), new Vector2(50, 200), _pongGame.GraphicsDevice);
             button.Text = "xd";
+            button.TextPosition = TextPosition.Left;
             button.SetClickListener(() =>
             {
                 button.Color = Color.Red;

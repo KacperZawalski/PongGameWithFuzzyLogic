@@ -18,6 +18,7 @@ namespace PongGameWithFuzzyLogic.UiComponents
         }
         public int PaddingTop { get; set; }
         public int PaddingLeft { get; set; }
+        public TextPosition TextPosition { get; set; }
         public SpriteFont Font { get; set; }
         public string Text { get; set; }
         public Color TextColor 
@@ -45,6 +46,7 @@ namespace PongGameWithFuzzyLogic.UiComponents
         }
         public Button(SpriteFont font, Vector2 dimensions, Vector2 position, GraphicsDevice graphicsDevice) : base(dimensions, position, graphicsDevice)
         {
+            TextPosition = TextPosition.Center;
             Font = font;
             Text = "";
             TextColor = Color.Black;
@@ -58,7 +60,7 @@ namespace PongGameWithFuzzyLogic.UiComponents
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             DrawRectangle(spriteBatch);
-            spriteBatch.DrawString(Font, Text, _textPosition, _textColor);
+            DrawText(spriteBatch);         
         }
 
         public override void Update(GameTime gameTime)
@@ -80,6 +82,19 @@ namespace PongGameWithFuzzyLogic.UiComponents
         {
             _clickAction = action;
         }
+        private void DrawText(SpriteBatch spriteBatch)
+        {
+            Vector2 newTextPosition = TextPositionHelper.CalculateTextPosition(
+                TextPosition, 
+                Font, 
+                Position, 
+                new Vector2(PaddingLeft, PaddingTop), 
+                Text,
+                _texture);
+
+            spriteBatch.DrawString(Font, Text, newTextPosition, _textColor);
+        }
+
         private bool IsMouseHovering()
         {
             MouseState mouseState = Mouse.GetState();
@@ -98,5 +113,6 @@ namespace PongGameWithFuzzyLogic.UiComponents
             _color = _colorCopy;
             _textColor = _textColorCopy;
         }
+       
     }
 }
