@@ -9,11 +9,20 @@ namespace PongGameWithFuzzyLogic.UiComponents
     {
         public Vector2 Position { get; set; }
         public Vector2 Dimensions { get; set; }
-        public Color Color { get; set; }
+        public Color Color
+        {
+            get => _color;
+            set
+            {
+                _color = value;
+            }
+        }
+        protected Color _color;
         protected Texture2D _texture;
         protected readonly GraphicsDevice _graphicsDevice;
         public Component(Vector2 dimensions, Vector2 position, GraphicsDevice graphicsDevice)
         {
+            Color = Color.White;
             Dimensions = dimensions;
             Position = position;
             _graphicsDevice = graphicsDevice;
@@ -27,10 +36,10 @@ namespace PongGameWithFuzzyLogic.UiComponents
             Color[] data = new Color[(int)Dimensions.X * (int)Dimensions.Y];
             for (int i = 0; i < data.Length; ++i)
             {
-                data[i] = Color;
+                data[i] = _color;
             }
             _texture.SetData(data);
-            spriteBatch.Draw(_texture, Position, Color);
+            spriteBatch.Draw(_texture, Position, _color);
         }
 
     }

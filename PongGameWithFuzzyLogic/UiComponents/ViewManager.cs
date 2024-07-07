@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -21,10 +22,11 @@ namespace PongGameWithFuzzyLogic.UiComponents
         public void Initialize()
         {
             Button button = new Button(_font, new Vector2(100, 100), new Vector2(50, 200), _pongGame.GraphicsDevice);
-            button.Color = Color.Red;
-            button.Text = "xxxxd";
-            button.TextColor = Color.Green;
-            button.PaddingLeft = 10;
+            button.Text = "xd";
+            button.SetClickListener(() =>
+            {
+                button.Color = Color.Red;
+            });
             _components.Add(button);
         }
         public void DrawComponents(GameTime gameTime, SpriteBatch spriteBatch)

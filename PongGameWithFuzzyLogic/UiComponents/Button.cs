@@ -7,6 +7,35 @@ namespace PongGameWithFuzzyLogic.UiComponents
 {
     public class Button : Component
     {
+        public new Color Color 
+        {
+            get => _color; 
+            set
+            {
+                _color = value;
+                _colorCopy = value;
+            } 
+        }
+        public int PaddingTop { get; set; }
+        public int PaddingLeft { get; set; }
+        public SpriteFont Font { get; set; }
+        public string Text { get; set; }
+        public Color TextColor 
+        {
+            get => _textColor; 
+            set
+            {
+                _textColor = value;
+                _textColorCopy = value;
+            }
+        }
+        public Color HoverColor { get; set; }
+        public Color HoverTextColor { get; set; }
+        private Color _textColorCopy;
+        private Color _textColor;
+        private Color _colorCopy;
+        private Action _clickAction;
+
         private Vector2 _textPosition
         {
             get
@@ -14,14 +43,6 @@ namespace PongGameWithFuzzyLogic.UiComponents
                 return new Vector2(Position.X + PaddingLeft, Position.Y + PaddingTop);
             }
         }
-
-        public int PaddingTop { get; set; }
-        public int PaddingLeft { get; set; }
-        public SpriteFont Font { get; set; }
-        public string Text { get; set; }
-        public Color TextColor { get; set; }
-        public Color HoverColor { get; set; }
-
         public Button(SpriteFont font, Vector2 dimensions, Vector2 position, GraphicsDevice graphicsDevice) : base(dimensions, position, graphicsDevice)
         {
             Font = font;
@@ -29,11 +50,15 @@ namespace PongGameWithFuzzyLogic.UiComponents
             TextColor = Color.Black;
             PaddingTop = 0;
             PaddingLeft = 0;
+            HoverColor = Color.DimGray;
+            HoverTextColor = Color.LightGray;
+            _colorCopy = Color;
+            _textColorCopy = TextColor;
         }
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             DrawRectangle(spriteBatch);
-            spriteBatch.DrawString(Font, Text, _textPosition, TextColor);
+            spriteBatch.DrawString(Font, Text, _textPosition, _textColor);
         }
 
         public override void Update(GameTime gameTime)
@@ -41,13 +66,20 @@ namespace PongGameWithFuzzyLogic.UiComponents
             if (IsMouseHovering())
             {
                 SetHoverStyling();
+                if (Mouse.GetState().LeftButton == ButtonState.Pressed)
+                {
+                    _clickAction();
+                }
             }
             else
             {
                 SetDefaultStyling();
             }
         }
-
+        public void SetClickListener(Action action)
+        {
+            _clickAction = action;
+        }
         private bool IsMouseHovering()
         {
             MouseState mouseState = Mouse.GetState();
@@ -58,11 +90,13 @@ namespace PongGameWithFuzzyLogic.UiComponents
         }
         private void SetHoverStyling()
         {
-            Color = Color.White;
+            _color = HoverColor;
+            _textColor = HoverTextColor;
         }
         private void SetDefaultStyling()
         {
-            Color = Color.Red;
+            _color = _colorCopy;
+            _textColor = _textColorCopy;
         }
     }
 }
