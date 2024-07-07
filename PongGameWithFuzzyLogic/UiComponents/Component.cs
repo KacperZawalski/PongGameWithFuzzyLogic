@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using System;
 
 namespace PongGameWithFuzzyLogic.UiComponents
@@ -16,14 +17,13 @@ namespace PongGameWithFuzzyLogic.UiComponents
             Dimensions = dimensions;
             Position = position;
             _graphicsDevice = graphicsDevice;
+            _texture = new Texture2D(_graphicsDevice, (int)Dimensions.X, (int)Dimensions.Y);
         }
         public abstract void Draw(GameTime gameTime, SpriteBatch spriteBatch);
         public abstract void Update(GameTime gameTime);
 
         public void DrawRectangle(SpriteBatch spriteBatch)
         {
-            _texture = new Texture2D(_graphicsDevice, (int)Dimensions.X, (int)Dimensions.Y);
-
             Color[] data = new Color[(int)Dimensions.X * (int)Dimensions.Y];
             for (int i = 0; i < data.Length; ++i)
             {

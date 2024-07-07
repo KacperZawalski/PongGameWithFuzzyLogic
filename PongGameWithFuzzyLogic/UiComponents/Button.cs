@@ -1,5 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+using System;
 
 namespace PongGameWithFuzzyLogic.UiComponents
 {
@@ -18,6 +20,7 @@ namespace PongGameWithFuzzyLogic.UiComponents
         public SpriteFont Font { get; set; }
         public string Text { get; set; }
         public Color TextColor { get; set; }
+        public Color HoverColor { get; set; }
 
         public Button(SpriteFont font, Vector2 dimensions, Vector2 position, GraphicsDevice graphicsDevice) : base(dimensions, position, graphicsDevice)
         {
@@ -35,6 +38,31 @@ namespace PongGameWithFuzzyLogic.UiComponents
 
         public override void Update(GameTime gameTime)
         {
+            if (IsMouseHovering())
+            {
+                SetHoverStyling();
+            }
+            else
+            {
+                SetDefaultStyling();
+            }
+        }
+
+        private bool IsMouseHovering()
+        {
+            MouseState mouseState = Mouse.GetState();
+            return Position.X < mouseState.X 
+                && Position.Y < mouseState.Y 
+                && Position.X + Dimensions.X > mouseState.X 
+                && Position.Y + Dimensions.Y > mouseState.Y;
+        }
+        private void SetHoverStyling()
+        {
+            Color = Color.White;
+        }
+        private void SetDefaultStyling()
+        {
+            Color = Color.Red;
         }
     }
 }
