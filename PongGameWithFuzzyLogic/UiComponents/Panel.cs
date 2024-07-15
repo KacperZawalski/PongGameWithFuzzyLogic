@@ -13,9 +13,14 @@ namespace PongGameWithFuzzyLogic.UiComponents
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
+            DrawRectangle(spriteBatch);
+
             foreach (var child in _children)
             {
-                child.Draw(gameTime, spriteBatch);
+                if (_texture.Bounds.Contains(child.Position))
+                {
+                    child.Draw(gameTime, spriteBatch);
+                }
             }
         }
         public void Add(Component component)
@@ -25,6 +30,10 @@ namespace PongGameWithFuzzyLogic.UiComponents
 
         public override void Update(GameTime gameTime)
         {
+            foreach (var child in _children)
+            {
+                child.Update(gameTime);
+            }
         }
     }
 }
