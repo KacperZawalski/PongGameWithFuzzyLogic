@@ -4,14 +4,13 @@ using PongGameWithFuzzyLogic.UiComponents;
 
 namespace PongGameWithFuzzyLogic.UiModels
 {
-    public class DefaultButton : Button
+    public class DefaultPanel : Panel
     {
-        public DefaultButton(SpriteFont font, Vector2 dimensions, Vector2 position, GraphicsDevice graphicsDevice) : base(font, dimensions, position, graphicsDevice)
+        public DefaultPanel(Vector2 dimensions, Vector2 position, GraphicsDevice graphicsDevice) : base(dimensions, position, graphicsDevice)
         {
             Color = Color.Black;
             BorderColor = Color.White;
             BorderWidth = 2;
-            TextColor = Color.White;
         }
     }
 }

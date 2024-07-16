@@ -12,7 +12,8 @@ namespace PongGameWithFuzzyLogic.UiModels
         private readonly List<Component> _components = new List<Component>();
         private DefaultButton pvpButton;
         private DefaultButton pveButton;
-        private Panel topPanel;
+        public DefaultPanel TopPanel { get; internal set; }
+        public DefaultPanel GamePanel { get; internal set; }
         public ViewManager(PongGame pongGame)
         {
             _pongGame = pongGame;
@@ -20,24 +21,38 @@ namespace PongGameWithFuzzyLogic.UiModels
 
         public void Initialize()
         {
-            topPanel = new Panel(new Vector2(1000, 150), new Vector2(0, 0), _pongGame.GraphicsDevice);
-            topPanel.Color = Color.Black;
-
+            CreatePanels();
             CreateButtons();
             AddButtonsToPanels();
+            AddPanelsToGame();
+        }
 
-            _components.Add(topPanel);
+        private void AddPanelsToGame()
+        {
+            _components.Add(TopPanel);
+            _components.Add(GamePanel);
+        }
+
+        private void CreatePanels()
+        {
+            TopPanel = new DefaultPanel(new Vector2(996, 146), new Vector2(0, 0), _pongGame.GraphicsDevice);
+
+            GamePanel = new DefaultPanel(
+                dimensions: new Vector2(996, _pongGame.GraphicsDevice.Viewport.Height - TopPanel.Dimensions.Y - 4),
+                position: new Vector2(0, TopPanel.Dimensions.Y),
+                _pongGame.GraphicsDevice);
         }
 
         private void AddButtonsToPanels()
         {
-            topPanel.Add(pvpButton);
-            topPanel.Add(pveButton);
+            TopPanel.Add(pvpButton);
+            TopPanel.Add(pveButton);
         }
 
         private void CreateButtons()
         {
             var font = _pongGame.Content.Load<SpriteFont>("font14");
+
             pvpButton = new DefaultButton(font, new Vector2(150, 40), new Vector2(830, 10), _pongGame.GraphicsDevice);
             pvpButton.Text = "Gracz vs Gracz";
             pveButton = new DefaultButton(font, new Vector2(150, 40), new Vector2(830, 60), _pongGame.GraphicsDevice);

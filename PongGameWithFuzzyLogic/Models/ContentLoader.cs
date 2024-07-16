@@ -33,8 +33,8 @@ namespace PongGameWithFuzzyLogic.Models
         {
             var racketTexture = _pongGame.Content.Load<Texture2D>("racket");
 
-            Racket topRacket = new TopRacket(racketTexture);
-            Racket bottomRacket = new BottomRacket(racketTexture);
+            Racket topRacket = new LeftRacket(racketTexture, _pongGame);
+            Racket bottomRacket = new RightRacket(racketTexture, _pongGame);
 
             Sprites.Add(topRacket);
             Sprites.Add(bottomRacket);

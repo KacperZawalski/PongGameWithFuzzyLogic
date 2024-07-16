@@ -10,7 +10,6 @@ namespace PongGameWithFuzzyLogic.Models
         public Vector2 Position { get; set; }
         public Sprite(Texture2D texture)
         {
-            Position = new Vector2(0, 0);
             Scale = 1;
             this.texture = texture;
         }
