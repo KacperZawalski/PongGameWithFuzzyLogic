@@ -7,12 +7,10 @@ namespace PongGameWithFuzzyLogic.Models
     public sealed class ContentLoader : IGameComponent
     {
         public List<Sprite> Sprites = new List<Sprite>();
-        private readonly List<string> _fontNames = new List<string>();
         private readonly PongGame _pongGame;
         public ContentLoader(PongGame pongGame)
         {
             _pongGame = pongGame;
-            _fontNames.Add("defaultFont");
         }
 
         public void LoadContent()
