@@ -42,11 +42,11 @@ namespace PongGameWithFuzzyLogic.UiComponents
             _children.Add(component);
         }
 
-        public override void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime, SpriteBatch spriteBatch)
         {
             foreach (var child in _children)
             {
-                child.Update(gameTime);
+                child.Update(gameTime, spriteBatch);
             }
         }
     }

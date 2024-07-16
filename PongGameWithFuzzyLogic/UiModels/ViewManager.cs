@@ -10,13 +10,16 @@ namespace PongGameWithFuzzyLogic.UiModels
     {
         private readonly PongGame _pongGame;
         private readonly List<Component> _components = new List<Component>();
+        private readonly SpriteFont _font;
         private DefaultButton pvpButton;
         private DefaultButton pveButton;
+        private TextBox sensitivityTextBox;
         public DefaultPanel TopPanel { get; internal set; }
         public DefaultPanel GamePanel { get; internal set; }
         public ViewManager(PongGame pongGame)
         {
             _pongGame = pongGame;
+            _font = pongGame.Content.Load<SpriteFont>("font14");
         }
 
         public void Initialize()
@@ -24,7 +27,24 @@ namespace PongGameWithFuzzyLogic.UiModels
             CreatePanels();
             CreateButtons();
             AddButtonsToPanels();
+            CreateTextBoxes();
+            AddTextBoxesToPanels();
             AddPanelsToGame();
+        }
+
+        private void AddTextBoxesToPanels()
+        {
+            TopPanel.Add(sensitivityTextBox);
+        }
+
+        private void CreateTextBoxes()
+        {
+            sensitivityTextBox = new TextBox(_font, new Vector2(50, 30), new Vector2(10, 50), _pongGame.GraphicsDevice);
+            sensitivityTextBox.Text = "5";
+            sensitivityTextBox.TextColor = Color.White;
+            sensitivityTextBox.Color = Color.Black;
+            sensitivityTextBox.BorderColor = Color.White;
+            sensitivityTextBox.BorderWidth = 2;
         }
 
         private void AddPanelsToGame()
@@ -51,11 +71,9 @@ namespace PongGameWithFuzzyLogic.UiModels
 
         private void CreateButtons()
         {
-            var font = _pongGame.Content.Load<SpriteFont>("font14");
-
-            pvpButton = new DefaultButton(font, new Vector2(150, 40), new Vector2(830, 10), _pongGame.GraphicsDevice);
+            pvpButton = new DefaultButton(_font, new Vector2(150, 40), new Vector2(830, 10), _pongGame.GraphicsDevice);
             pvpButton.Text = "Gracz vs Gracz";
-            pveButton = new DefaultButton(font, new Vector2(150, 40), new Vector2(830, 60), _pongGame.GraphicsDevice);
+            pveButton = new DefaultButton(_font, new Vector2(150, 40), new Vector2(830, 60), _pongGame.GraphicsDevice);
             pveButton.Text = "Gracz vs AI";
         }
 
@@ -67,11 +85,11 @@ namespace PongGameWithFuzzyLogic.UiModels
             }
         }
 
-        public void UpdateComponents(GameTime gameTime)
+        public void UpdateComponents(GameTime gameTime, SpriteBatch spriteBatch)
         {
             foreach (var component in _components)
             {
-                component.Update(gameTime);
+                component.Update(gameTime, spriteBatch);
             }
         }
     }

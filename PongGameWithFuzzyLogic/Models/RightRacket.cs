@@ -12,11 +12,14 @@ namespace PongGameWithFuzzyLogic.Models
 
         public override Racket SetDefaultPosition()
         {
-            Position = new Vector2(700,400);
+            var verticalCenter = _pongGame.ViewManager.GamePanel.Dimensions.Y / 2 + _pongGame.ViewManager.GamePanel.Position.Y;
+            var horizontalRight = _pongGame.ViewManager.GamePanel.Dimensions.X + _pongGame.ViewManager.GamePanel.BorderWidth * 2 - 20;
+            Position = new Vector2(horizontalRight, verticalCenter);
+
             return this;
         }
 
-        public override void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime, SpriteBatch spriteBatch)
         {
         }
     }

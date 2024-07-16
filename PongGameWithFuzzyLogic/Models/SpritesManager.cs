@@ -23,11 +23,11 @@ namespace PongGameWithFuzzyLogic.Models
             }
         }
 
-        public void UpdateSprites(GameTime gameTime)
+        public void UpdateSprites(GameTime gameTime, SpriteBatch spriteBatch)
         {
             foreach (var sprite in Sprites)
             {
-                sprite.Update(gameTime);
+                sprite.Update(gameTime, spriteBatch);
             }
         }
     }

@@ -14,6 +14,7 @@ namespace PongGameWithFuzzyLogic.UiComponents
             set
             {
                 _color = value;
+                _colorCopy = value;
             }
         }
         public int BorderWidth
@@ -30,6 +31,7 @@ namespace PongGameWithFuzzyLogic.UiComponents
                 _borderTexture = new Texture2D(_graphicsDevice, (int)Dimensions.X + value * 2, (int)Dimensions.Y + value * 2);
             }
         }
+        protected Color _colorCopy;
         protected Texture2D _borderTexture;
         protected int _borderWidth;
         protected Color _color;
@@ -45,7 +47,7 @@ namespace PongGameWithFuzzyLogic.UiComponents
             BorderWidth = 0;
         }
         public abstract void Draw(GameTime gameTime, SpriteBatch spriteBatch);
-        public abstract void Update(GameTime gameTime);
+        public abstract void Update(GameTime gameTime, SpriteBatch spriteBatch);
 
         protected void DrawRectangle(SpriteBatch spriteBatch)
         {

@@ -43,8 +43,8 @@ namespace PongGameWithFuzzyLogic
 
         protected override void Update(GameTime gameTime)
         {
-            ViewManager.UpdateComponents(gameTime);
-            spritesManager.UpdateSprites(gameTime);
+            ViewManager.UpdateComponents(gameTime, spriteBatch);
+            spritesManager.UpdateSprites(gameTime, spriteBatch);
 
             base.Update(gameTime);
         }
