@@ -1,3 +1,2 @@
-﻿
-using var game = new PongGameWithFuzzyLogic.PongGame();
+﻿using var game = new PongGameWithFuzzyLogic.PongGame();
 game.Run();

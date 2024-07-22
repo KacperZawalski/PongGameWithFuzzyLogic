@@ -51,7 +51,7 @@ namespace PongGameWithFuzzyLogic.UiComponents
 
         protected void DrawText(SpriteBatch spriteBatch)
         {
-            Vector2 newTextPosition = TextPositionHelper.CalculateTextPosition(
+            Vector2 newTextPosition = TextPositionFactory.CalculateTextPosition(
                 TextPosition,
                 Font,
                 Position,
