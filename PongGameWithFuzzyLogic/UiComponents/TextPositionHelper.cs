@@ -8,21 +8,21 @@ namespace PongGameWithFuzzyLogic.UiComponents
         public static Vector2 CalculateTextPosition(TextPosition textPosition, SpriteFont font, Vector2 position, Vector2 padding, string text, Texture2D texture)
         {
             Vector2 textSize = font.MeasureString(text);
-
-            float horizontalLeft = position.X + padding.X;
-            float horizontalRight = horizontalLeft + texture.Width - textSize.X;
-            float horizontalCenter = horizontalLeft + texture.Width / 2 - textSize.X / 2;
-            float verticalCenter = position.Y + texture.Height / 2 - textSize.Y / 2 + padding.Y;
-
+            ITextPositionStrategy strategy;
             switch (textPosition)
             {
                 case TextPosition.Left:
-                    return new Vector2(horizontalLeft, verticalCenter);
+                    strategy = new LeftTextPositionStrategy();
+                    break;
                 case TextPosition.Right:
-                    return new Vector2(horizontalRight, verticalCenter);
+                    strategy = new RightTextPositionStrategy();
+                    break;
                 default:
-                    return new Vector2(horizontalCenter, verticalCenter);
+                    strategy = new CenterTextPositionStrategy();
+                    break;
             }
+
+            return strategy.CalculateTextPosition(font, position, padding, text, texture);
         }
     }
 }
