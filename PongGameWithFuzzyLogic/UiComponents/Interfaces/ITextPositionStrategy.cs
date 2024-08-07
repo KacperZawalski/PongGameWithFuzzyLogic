@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace PongGameWithFuzzyLogic.UiComponents
+namespace PongGameWithFuzzyLogic.UiComponents.Interfaces
 {
     public interface ITextPositionStrategy
     {

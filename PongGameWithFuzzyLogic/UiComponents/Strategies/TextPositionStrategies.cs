@@ -1,7 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using PongGameWithFuzzyLogic.UiComponents.Interfaces;
 
-namespace PongGameWithFuzzyLogic.UiComponents
+namespace PongGameWithFuzzyLogic.UiComponents.Strategies
 {
     public class LeftTextPositionStrategy : ITextPositionStrategy
     {

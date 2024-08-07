@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using PongGameWithFuzzyLogic.UiComponents.Helpers;
 using System;
 using System.Linq;
 
@@ -8,9 +9,11 @@ namespace PongGameWithFuzzyLogic.UiComponents
 {
     public class TextBox : TextComponent
     {
-        private bool coursorMissing = true;
-
+        public char CursorCharacter { get; set; } = '|';
+        public bool CursorMissing { get; set; } = true;
+        public int CursorPosition { get; set; }
         public bool Focused { get; set; }
+        private bool _acceptInput;
         public TextBox(SpriteFont font, Vector2 dimensions, Vector2 position, GraphicsDevice graphicsDevice) : base(font, dimensions, position, graphicsDevice)
         {
         }
@@ -30,26 +33,30 @@ namespace PongGameWithFuzzyLogic.UiComponents
                 _clickAction?.Invoke();
                 Focused = IsMouseHovering();
             }
-            if (Focused && coursorMissing)
-            {
-                DrawTextCursor(spriteBatch);
-                coursorMissing = false;
-            }
-            else if (!Focused)
-            {
-                RemoveCoursor();
-                coursorMissing = true;
-            }
-        }
 
-        private void RemoveCoursor()
-        {
-            Text = Text.Trim('|');
-        }
+            if (Focused)
+            {
+                if (CursorMissing)
+                {
+                    Text += CursorCharacter;
+                    CursorPosition = Text.Length - 1;
+                    CursorMissing = false;
+                }
+                var pressedKey = Keyboard.GetState().GetPressedKeys().FirstOrDefault();
+                
+                if (_acceptInput)
+                {
+                    new KeyboardInputHelper().HandleInput(this, pressedKey);
+                    _acceptInput = false;
+                }
 
-        private void DrawTextCursor(SpriteBatch spriteBatch)
-        {
-            Text += "|";
+                _acceptInput = Keyboard.GetState().IsKeyUp(pressedKey);
+            }
+            else
+            {
+                Text = Text.Replace(CursorCharacter.ToString(), string.Empty);
+                CursorMissing = true;
+            }
         }
     }
 }

@@ -1,8 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using PongGameWithFuzzyLogic.UiComponents.Helpers;
 using System;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace PongGameWithFuzzyLogic.UiComponents
 {

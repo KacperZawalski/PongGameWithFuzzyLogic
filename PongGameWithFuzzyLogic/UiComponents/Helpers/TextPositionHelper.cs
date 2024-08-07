@@ -1,7 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using PongGameWithFuzzyLogic.UiComponents.Interfaces;
+using PongGameWithFuzzyLogic.UiComponents.Strategies;
 
-namespace PongGameWithFuzzyLogic.UiComponents
+namespace PongGameWithFuzzyLogic.UiComponents.Helpers
 {
     public sealed class TextPositionFactory
     {
