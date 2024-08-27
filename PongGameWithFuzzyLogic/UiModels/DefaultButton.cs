@@ -12,6 +12,8 @@ namespace PongGameWithFuzzyLogic.UiModels
             BorderColor = Color.White;
             BorderWidth = 2;
             TextColor = Color.White;
+            HoverColor = Color.LightGray;
+            HoverTextColor = Color.White;
         }
     }
 }

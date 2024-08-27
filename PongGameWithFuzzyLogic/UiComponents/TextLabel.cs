@@ -6,16 +6,16 @@ using System;
 
 namespace PongGameWithFuzzyLogic.UiComponents
 {
-    public abstract class TextComponent : Component
+    public class TextLabel : Component
     {
         public TextPosition TextPosition { get; set; }
         public SpriteFont Font { get; set; }
-        public string Text { get; set; }
+        public string Text { get; set; } = string.Empty;
         public int PaddingTop { get; set; }
         public int PaddingLeft { get; set; }
         public Color HoverColor { get; set; }
         public Color HoverTextColor { get; set; }
-        public Color TextColor
+        public Color TextColor  
         {
             get => _textColor;
             set
@@ -35,16 +35,13 @@ namespace PongGameWithFuzzyLogic.UiComponents
                 return new Vector2(Position.X + PaddingLeft, Position.Y + PaddingTop);
             }
         }
-        protected TextComponent(SpriteFont font, Vector2 dimensions, Vector2 position, GraphicsDevice graphicsDevice) : base(dimensions, position, graphicsDevice)
+        public TextLabel(SpriteFont font, Vector2 dimensions, Vector2 position, GraphicsDevice graphicsDevice) : base(dimensions, position, graphicsDevice)
         {
-            HoverColor = Color.DimGray;
-            HoverTextColor = Color.LightGray;
+            HoverColor = Color;
+            HoverTextColor = TextColor;
             Font = font;
             TextPosition = TextPosition.Center;
-            Text = "";
             TextColor = Color.Black;
-            PaddingTop = 0;
-            PaddingLeft = 0;
             _colorCopy = Color;
             _textColorCopy = TextColor;
         }
@@ -89,6 +86,13 @@ namespace PongGameWithFuzzyLogic.UiComponents
         {
             _color = _colorCopy;
             _textColor = _textColorCopy;
+        }
+
+        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+            DrawBorder(spriteBatch);
+            DrawRectangle(spriteBatch);
+            DrawText(spriteBatch);
         }
     }
 }

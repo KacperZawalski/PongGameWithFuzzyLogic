@@ -13,7 +13,8 @@ namespace PongGameWithFuzzyLogic.UiModels
         private readonly SpriteFont _font;
         private DefaultButton pvpButton;
         private DefaultButton pveButton;
-        private TextBox sensitivityTextBox;
+        private DefaultTextBox racketSpeedTextBox;
+        private DefaultTextLabel racketSpeedLabel;
         public DefaultPanel TopPanel { get; internal set; }
         public DefaultPanel GamePanel { get; internal set; }
         public ViewManager(PongGame pongGame)
@@ -28,23 +29,40 @@ namespace PongGameWithFuzzyLogic.UiModels
             CreateButtons();
             AddButtonsToPanels();
             CreateTextBoxes();
+            CreateTextLabels();
+            AddTextLabelsToPanels();
             AddTextBoxesToPanels();
             AddPanelsToGame();
         }
 
+        private void AddTextLabelsToPanels()
+        {
+            TopPanel.Add(racketSpeedLabel);
+        }
+
+        private void CreateTextLabels()
+        {
+            racketSpeedLabel = new DefaultTextLabel(_font, new Vector2(200, 30), new Vector2(530, 10), _pongGame.GraphicsDevice);
+            racketSpeedLabel.Text = "Racket movement speed";
+
+        }
+
         private void AddTextBoxesToPanels()
         {
-            TopPanel.Add(sensitivityTextBox);
+            TopPanel.Add(racketSpeedTextBox);
         }
 
         private void CreateTextBoxes()
         {
-            sensitivityTextBox = new TextBox(_font, new Vector2(50, 30), new Vector2(10, 50), _pongGame.GraphicsDevice);
-            sensitivityTextBox.Text = "5";
-            sensitivityTextBox.TextColor = Color.White;
-            sensitivityTextBox.Color = Color.Black;
-            sensitivityTextBox.BorderColor = Color.White;
-            sensitivityTextBox.BorderWidth = 2;
+            racketSpeedTextBox = new DefaultTextBox(_font, new Vector2(50, 30), new Vector2(750, 10), _pongGame.GraphicsDevice);
+            racketSpeedTextBox.Text = "5";
+            racketSpeedTextBox.SetTextChangeAction(() =>
+            {
+                //if (!int.TryParse(racketSpeedTextBox.Text, out int result) && racketSpeedTextBox.Text != string.Empty)
+                //{
+                //    racketSpeedTextBox.Text = racketSpeedTextBox.Text.Substring(0, racketSpeedTextBox.Text.Length - 2);
+                //}
+            });
         }
 
         private void AddPanelsToGame()
@@ -72,9 +90,9 @@ namespace PongGameWithFuzzyLogic.UiModels
         private void CreateButtons()
         {
             pvpButton = new DefaultButton(_font, new Vector2(150, 40), new Vector2(830, 10), _pongGame.GraphicsDevice);
-            pvpButton.Text = "Gracz vs Gracz";
+            pvpButton.Text = "Player vs Player";
             pveButton = new DefaultButton(_font, new Vector2(150, 40), new Vector2(830, 60), _pongGame.GraphicsDevice);
-            pveButton.Text = "Gracz vs AI";
+            pveButton.Text = "Player vs AI";
         }
 
         public void DrawComponents(GameTime gameTime, SpriteBatch spriteBatch)

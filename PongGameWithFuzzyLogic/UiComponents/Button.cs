@@ -5,7 +5,7 @@ using System;
 
 namespace PongGameWithFuzzyLogic.UiComponents
 {
-    public class Button : TextComponent
+    public class Button : TextLabel
     {
         public Button(SpriteFont font, Vector2 dimensions, Vector2 position, GraphicsDevice graphicsDevice) : base(font, dimensions, position, graphicsDevice)
         {
@@ -17,7 +17,7 @@ namespace PongGameWithFuzzyLogic.UiComponents
             DrawText(spriteBatch);
         }
 
-        public void SetClickListener(Action action)
+        public void SetClickAction(Action action)
         {
             _clickAction = action;
         }

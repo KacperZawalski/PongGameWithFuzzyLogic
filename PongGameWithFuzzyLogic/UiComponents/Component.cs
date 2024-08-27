@@ -65,6 +65,11 @@ namespace PongGameWithFuzzyLogic.UiComponents
         }
         protected void DrawBorder(SpriteBatch spriteBatch)
         {
+            if (BorderWidth <= 0)
+            {
+                return;
+            }
+
             Color[] data = new Color[_borderTexture.Width * _borderTexture.Height];
             for (int i = 0; i < data.Length; i++)
             {

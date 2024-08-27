@@ -7,15 +7,22 @@ using System.Linq;
 
 namespace PongGameWithFuzzyLogic.UiComponents
 {
-    public class TextBox : TextComponent
+    public class TextBox : TextLabel
     {
         public char CursorCharacter { get; set; } = '|';
         public bool CursorMissing { get; set; } = true;
         public int CursorPosition { get; set; }
+        
         public bool Focused { get; set; }
+        private Action _textChangedAction;
         private bool _acceptInput;
+
         public TextBox(SpriteFont font, Vector2 dimensions, Vector2 position, GraphicsDevice graphicsDevice) : base(font, dimensions, position, graphicsDevice)
         {
+        }
+        public void SetTextChangeAction(Action action)
+        {
+            _textChangedAction = action;
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -28,35 +35,63 @@ namespace PongGameWithFuzzyLogic.UiComponents
         {
             base.Update(gameTime, spriteBatch);
 
+            HandleMouseInput();
+
+            if (Focused)
+            {
+                UpdateCursorState();
+                HandleKeyboardInput();
+            }
+            else
+            {
+                RemoveCursor();
+            }
+        }
+
+        private void HandleMouseInput()
+        {
             if (Mouse.GetState().LeftButton == ButtonState.Pressed)
             {
                 _clickAction?.Invoke();
                 Focused = IsMouseHovering();
             }
+        }
 
-            if (Focused)
+        private void UpdateCursorState()
+        {
+            if (CursorMissing)
             {
-                if (CursorMissing)
+                Text += CursorCharacter;
+                CursorPosition = Text.Length - 1;
+                CursorMissing = false;
+            }
+        }
+
+        private void HandleKeyboardInput()
+        {
+            var keyboardState = Keyboard.GetState();
+            var pressedKey = keyboardState.GetPressedKeys().FirstOrDefault();
+
+            if (_acceptInput && pressedKey != Keys.None)
+            {
+                var oldText = Text;
+                new KeyboardInputHelper().HandleInput(this, pressedKey);
+
+                if (oldText != Text)
                 {
-                    Text += CursorCharacter;
-                    CursorPosition = Text.Length - 1;
-                    CursorMissing = false;
-                }
-                var pressedKey = Keyboard.GetState().GetPressedKeys().FirstOrDefault();
-                
-                if (_acceptInput)
-                {
-                    new KeyboardInputHelper().HandleInput(this, pressedKey);
-                    _acceptInput = false;
+                    _textChangedAction?.Invoke();
                 }
 
-                _acceptInput = Keyboard.GetState().IsKeyUp(pressedKey);
+                _acceptInput = false;
             }
-            else
-            {
-                Text = Text.Replace(CursorCharacter.ToString(), string.Empty);
-                CursorMissing = true;
-            }
+
+            _acceptInput = keyboardState.IsKeyUp(pressedKey);
+        }
+
+        private void RemoveCursor()
+        {
+            Text = Text.Replace(CursorCharacter.ToString(), string.Empty);
+            CursorMissing = true;
         }
     }
 }
