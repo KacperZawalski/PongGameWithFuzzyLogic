@@ -1,1 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?><SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Profile>Reach</Profile><Platform>DesktopGL</Platform><Config /><SourceFiles><File>C:/Users/Kacper/Desktop/Projekty/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/ball.png</File><File>C:/Users/Kacper/Desktop/Projekty/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/font10.spritefont</File><File>C:/Users/Kacper/Desktop/Projekty/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/font11.spritefont</File><File>C:/Users/Kacper/Desktop/Projekty/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/font12.spritefont</File><File>C:/Users/Kacper/Desktop/Projekty/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/font14.spritefont</File><File>C:/Users/Kacper/Desktop/Projekty/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/font16.spritefont</File><File>C:/Users/Kacper/Desktop/Projekty/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/font18.spritefont</File><File>C:/Users/Kacper/Desktop/Projekty/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/font20.spritefont</File><File>C:/Users/Kacper/Desktop/Projekty/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/font22.spritefont</File><File>C:/Users/Kacper/Desktop/Projekty/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/font24.spritefont</File><File>C:/Users/Kacper/Desktop/Projekty/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/font8.spritefont</File><File>C:/Users/Kacper/Desktop/Projekty/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/font9.spritefont</File><File>C:/Users/Kacper/Desktop/Projekty/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/racket.png</File></SourceFiles><DestFiles><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /><File xsi:nil="true" /></DestFiles></SourceFileCollection>
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/Kornik/Desktop/Projects/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/ball.png</File>
+    <File>C:/Users/Kornik/Desktop/Projects/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/font10.spritefont</File>
+    <File>C:/Users/Kornik/Desktop/Projects/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/font11.spritefont</File>
+    <File>C:/Users/Kornik/Desktop/Projects/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/font12.spritefont</File>
+    <File>C:/Users/Kornik/Desktop/Projects/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/font14.spritefont</File>
+    <File>C:/Users/Kornik/Desktop/Projects/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/font16.spritefont</File>
+    <File>C:/Users/Kornik/Desktop/Projects/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/font18.spritefont</File>
+    <File>C:/Users/Kornik/Desktop/Projects/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/font20.spritefont</File>
+    <File>C:/Users/Kornik/Desktop/Projects/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/font22.spritefont</File>
+    <File>C:/Users/Kornik/Desktop/Projects/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/font24.spritefont</File>
+    <File>C:/Users/Kornik/Desktop/Projects/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/font8.spritefont</File>
+    <File>C:/Users/Kornik/Desktop/Projects/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/font9.spritefont</File>
+    <File>C:/Users/Kornik/Desktop/Projects/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/racket.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

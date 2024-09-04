@@ -1,7 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using PongGameWithFuzzyLogic.Models;
 using PongGameWithFuzzyLogic.UiModels;
+using System;
 
 namespace PongGameWithFuzzyLogic
 {
@@ -14,6 +16,14 @@ namespace PongGameWithFuzzyLogic
         private ContentLoader contentLoader;
         private SpritesManager spritesManager;
         private readonly GraphicsDeviceManager _graphics;
+        public GameState GameState 
+        { 
+            get
+            {
+                return gameState;
+            }
+        }
+        private GameState gameState = GameState.WaitingForServe;
 
         public PongGame()
         {
@@ -43,10 +53,16 @@ namespace PongGameWithFuzzyLogic
 
         protected override void Update(GameTime gameTime)
         {
+            UpdateGameState();
             ViewManager.UpdateComponents(gameTime, spriteBatch);
             spritesManager.UpdateSprites(gameTime, spriteBatch);
 
             base.Update(gameTime);
+        }
+
+        private void UpdateGameState()
+        {
+            gameState = new GameStateFactory().GetGameState(this);
         }
 
         protected override void Draw(GameTime gameTime)

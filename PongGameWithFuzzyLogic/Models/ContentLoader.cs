@@ -27,7 +27,7 @@ namespace PongGameWithFuzzyLogic.Models
         {
             var ballTexture = _pongGame.Content.Load<Texture2D>("ball");
 
-            Sprites.Add(new Ball(ballTexture));
+            Sprites.Add(new Ball(ballTexture, _pongGame));
         }
         private void LoadRackets()
         {
