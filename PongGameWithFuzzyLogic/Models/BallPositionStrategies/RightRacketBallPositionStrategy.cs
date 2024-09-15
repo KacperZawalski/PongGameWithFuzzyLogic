@@ -1,10 +1,13 @@
-﻿namespace PongGameWithFuzzyLogic.Models.BallPositionStrategies
+﻿using Microsoft.Xna.Framework;
+
+namespace PongGameWithFuzzyLogic.Models.BallPositionStrategies
 {
     public class RightRacketBallPositionStrategy : IBallPositionStrategy
     {
-        public void SetBallPosition(Ball ball)
+        public void SetBallPosition(Ball ball, PongGame pongGame)
         {
-            throw new System.NotImplementedException();
+            ball.Position = new Vector2(pongGame.RightRacket.Position.X - pongGame.RightRacket.Texture.Height * pongGame.RightRacket.Scale, pongGame.RightRacket.Position.Y);
+            ball.Moving = false;
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace PongGameWithFuzzyLogic.UiComponents
 {
@@ -19,7 +20,7 @@ namespace PongGameWithFuzzyLogic.UiComponents
                 _borderTexture = new Texture2D(_graphicsDevice, (int)Dimensions.X, (int)Dimensions.Y);
             }
         }
-        private List<Component> _children = new List<Component>();
+        private readonly List<Component> _children = new List<Component>();
         public Panel(Vector2 dimensions, Vector2 position, GraphicsDevice graphicsDevice) : base(dimensions, position, graphicsDevice)
         {
         }
@@ -29,12 +30,9 @@ namespace PongGameWithFuzzyLogic.UiComponents
             DrawBorder(spriteBatch);
             DrawRectangle(spriteBatch);
 
-            foreach (var child in _children)
+            foreach (var child in _children.Where(child => _texture.Bounds.Contains(child.Position)))
             {
-                if (_texture.Bounds.Contains(child.Position))
-                {
-                    child.Draw(gameTime, spriteBatch);
-                }
+                child.Draw(gameTime, spriteBatch);
             }
         }
         public void Add(Component component)

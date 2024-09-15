@@ -6,7 +6,7 @@ namespace PongGameWithFuzzyLogic.Models
 {
     public class SpritesManager : IGameComponent
     {
-        public List<Sprite> Sprites;
+        public List<Sprite> Sprites { get; } = new List<Sprite>();
         private readonly PongGame _pongGame;
         public SpritesManager(PongGame pongGame)
         {

@@ -5,7 +5,7 @@ namespace PongGameWithFuzzyLogic.Models
 {
     public abstract class Sprite
     {
-        protected Texture2D texture;
+        public Texture2D Texture { get; internal set; }
         public float Scale { get; set; }
         public Vector2 Position { get; set; }
         public float Rotation { get; set; }
@@ -13,18 +13,18 @@ namespace PongGameWithFuzzyLogic.Models
         {
             get
             {
-                return new Vector2(texture.Width / 2, texture.Height / 2);
+                return new Vector2(Texture.Width / 2, Texture.Height / 2);
             }
         }
         public Sprite(Texture2D texture)
         {
             Rotation = 0;
             Scale = 1;
-            this.texture = texture;
+            Texture = texture;
         }
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(texture, Position, null, Color.White, Rotation, Origin, Scale, SpriteEffects.None, 0);
+            spriteBatch.Draw(Texture, Position, null, Color.White, Rotation, Origin, Scale, SpriteEffects.None, 0);
         }
         public abstract void Update(GameTime gameTime, SpriteBatch spriteBatch);
     }

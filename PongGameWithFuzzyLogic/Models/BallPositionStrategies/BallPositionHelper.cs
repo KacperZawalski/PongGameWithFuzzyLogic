@@ -1,4 +1,6 @@
-﻿namespace PongGameWithFuzzyLogic.Models.BallPositionStrategies
+﻿using System;
+
+namespace PongGameWithFuzzyLogic.Models.BallPositionStrategies
 {
     public static class BallPositionHelper
     {
@@ -12,20 +14,28 @@
                     strategy = new MovingBallPositionStrategy();
                     break;
                 case GameState.LeftScored:
-                    strategy = new LeftRacketBallPositionStrategy();
-                    break;
-                case GameState.RightScored:
+                case GameState.WaitingForRight:
                     strategy = new RightRacketBallPositionStrategy();
                     break;
-                case GameState.FirstServe:
-                    //will be random in future
+                case GameState.RightScored:
+                case GameState.WaitingForLeft:
                     strategy = new LeftRacketBallPositionStrategy();
+                    break;
+                case GameState.FirstServe:
+                    strategy = new LeftRacketBallPositionStrategy();
+                    break;
+                case GameState.LeftServed:
+                    strategy = new LeftServedBallPositionStrategy();
+                    break;
+                case GameState.RightServed:
+                    strategy = new RightServedBallPositionStrategy();
                     break;
                 default:
                     strategy = new MovingBallPositionStrategy();
                     break;
             }
-            strategy.SetBallPosition(ball);
+
+            strategy.SetBallPosition(ball, pongGame);
         }
     }
 }

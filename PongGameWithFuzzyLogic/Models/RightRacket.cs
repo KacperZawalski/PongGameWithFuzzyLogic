@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 
 namespace PongGameWithFuzzyLogic.Models
 {
@@ -21,6 +22,24 @@ namespace PongGameWithFuzzyLogic.Models
 
         public override void Update(GameTime gameTime, SpriteBatch spriteBatch)
         {
+            var keyboardState = Keyboard.GetState();
+
+            if (keyboardState.IsKeyDown(Keys.Up) && IsWithinUpperBound())
+            {
+                Position = new Vector2(Position.X, Position.Y - Sensitivity);
+            }
+            if (keyboardState.IsKeyDown(Keys.Down) && IsWithinLowerBound())
+            {
+                Position = new Vector2(Position.X, Position.Y + Sensitivity);
+            }
+        }
+        private bool IsWithinUpperBound()
+        {
+            return Position.Y - Texture.Width / 2 * Scale > _pongGame.ViewManager.GamePanel.Position.Y;
+        }
+        private bool IsWithinLowerBound()
+        {
+            return Position.Y + Texture.Width / 2 * Scale < _pongGame.ViewManager.GamePanel.Position.Y + _pongGame.ViewManager.GamePanel.Dimensions.Y;
         }
     }
 }

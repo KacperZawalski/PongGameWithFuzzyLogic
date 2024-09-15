@@ -2,6 +2,6 @@
 {
     public interface IBallPositionStrategy
     {
-        public void SetBallPosition(Ball ball);
+        public void SetBallPosition(Ball ball, PongGame pongGame);
     }
 }

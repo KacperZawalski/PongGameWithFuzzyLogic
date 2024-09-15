@@ -3,52 +3,92 @@
   "WorkspaceRootPath": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|c:\\users\\kornik\\desktop\\projects\\c#\\ponggamewithfuzzylogic\\ponggamewithfuzzylogic\\models\\ballpositionstrategies\\movingballpositionstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\models\\ballpositionstrategies\\movingballpositionstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\models\\gamestatefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\models\\gamestatefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|c:\\users\\kornik\\desktop\\projects\\c#\\ponggamewithfuzzylogic\\ponggamewithfuzzylogic\\models\\ballpositionstrategies\\ballpositionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\models\\ballpositionstrategies\\ballpositionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\models\\ballpositionstrategies\\ballpositionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|c:\\users\\kornik\\desktop\\projects\\c#\\ponggamewithfuzzylogic\\ponggamewithfuzzylogic\\models\\ball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\models\\ball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\models\\gamestates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\models\\gamestates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|c:\\users\\kornik\\desktop\\projects\\c#\\ponggamewithfuzzylogic\\ponggamewithfuzzylogic\\models\\ballpositionstrategies\\iballpositionstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\models\\ballpositionstrategies\\iballpositionstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\models\\leftracket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\models\\leftracket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|c:\\users\\kornik\\desktop\\projects\\c#\\ponggamewithfuzzylogic\\ponggamewithfuzzylogic\\models\\ballpositionstrategies\\rightracketballpositionstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\models\\ballpositionstrategies\\rightracketballpositionstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|c:\\users\\kornik\\desktop\\projects\\c#\\ponggamewithfuzzylogic\\ponggamewithfuzzylogic\\models\\ballpositionstrategies\\leftracketballpositionstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\models\\ballpositionstrategies\\leftracketballpositionstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\models\\ballpositionstrategies\\leftracketballpositionstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|c:\\users\\kornik\\desktop\\projects\\c#\\ponggamewithfuzzylogic\\ponggamewithfuzzylogic\\models\\gamestates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\models\\gamestates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|c:\\users\\kornik\\desktop\\projects\\c#\\ponggamewithfuzzylogic\\ponggamewithfuzzylogic\\models\\ballpositionstrategies\\leftservedballpositionstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\models\\ballpositionstrategies\\leftservedballpositionstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\models\\ballpositionstrategies\\rightracketballpositionstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\models\\ballpositionstrategies\\rightracketballpositionstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\ponggame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\ponggame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|c:\\users\\kornik\\desktop\\projects\\c#\\ponggamewithfuzzylogic\\ponggamewithfuzzylogic\\models\\gamestatefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\models\\gamestatefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|c:\\users\\kornik\\desktop\\projects\\c#\\ponggamewithfuzzylogic\\ponggamewithfuzzylogic\\models\\ballpositionstrategies\\rightservedballpositionstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\models\\ballpositionstrategies\\rightservedballpositionstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\uicomponents\\helpers\\keyboardinputhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\uicomponents\\helpers\\keyboardinputhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\models\\rightracket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\models\\rightracket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|c:\\users\\kornik\\desktop\\projects\\c#\\ponggamewithfuzzylogic\\ponggamewithfuzzylogic\\models\\ballpositionstrategies\\movingballpositionstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\models\\ballpositionstrategies\\movingballpositionstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\models\\ball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\models\\ball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\models\\ballpositionstrategies\\iballpositionstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\models\\ballpositionstrategies\\iballpositionstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\models\\spritesmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\models\\spritesmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\models\\racket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\models\\racket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\models\\sprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\models\\sprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\uicomponents\\button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\uicomponents\\button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\models\\contentloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\models\\contentloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\models\\sprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\models\\sprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\uimodels\\viewmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\uimodels\\viewmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\uicomponents\\panel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\uicomponents\\panel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\uimodels\\defaultpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\uimodels\\defaultpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\uicomponents\\helpers\\keyboardinputhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\uicomponents\\helpers\\keyboardinputhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\uicomponents\\strategies\\keyboardinputstrategies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -57,14 +97,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\models\\spritesmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\models\\spritesmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|c:\\users\\kornik\\desktop\\projects\\c#\\ponggamewithfuzzylogic\\ponggamewithfuzzylogic\\uimodels\\viewmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\uimodels\\viewmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\uimodels\\defaultbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -79,20 +111,12 @@
       "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\uicomponents\\component.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\uicomponents\\button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\uicomponents\\button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\uimodels\\defaulttextbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\uimodels\\defaulttextbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\uicomponents\\textlabel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\uicomponents\\textlabel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\uicomponents\\panel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\uicomponents\\panel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\uimodels\\defaulttextlabel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -113,22 +137,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\uicomponents\\helpers\\textpositionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\uicomponents\\helpers\\textpositionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\models\\leftracket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\models\\leftracket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\models\\rightracket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\models\\rightracket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\uimodels\\defaultpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\uimodels\\defaultpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\ponggamewithfuzzylogic\\models\\racket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56E809DD-D905-452B-AB1C-4CF3D8FFD3A7}|PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic.csproj|solutionrelative:ponggamewithfuzzylogic\\models\\racket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -138,7 +146,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -150,15 +158,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MovingBallPositionStrategy.cs",
-              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\MovingBallPositionStrategy.cs",
-              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\MovingBallPositionStrategy.cs",
-              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\MovingBallPositionStrategy.cs",
-              "RelativeToolTip": "PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\MovingBallPositionStrategy.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
+              "DocumentIndex": 5,
+              "Title": "LeftServedBallPositionStrategy.cs",
+              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\LeftServedBallPositionStrategy.cs",
+              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\LeftServedBallPositionStrategy.cs",
+              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\LeftServedBallPositionStrategy.cs",
+              "RelativeToolTip": "PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\LeftServedBallPositionStrategy.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T14:35:38.522Z",
+              "WhenOpened": "2024-09-15T19:24:11.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LeftRacketBallPositionStrategy.cs",
+              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\LeftRacketBallPositionStrategy.cs",
+              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\LeftRacketBallPositionStrategy.cs",
+              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\LeftRacketBallPositionStrategy.cs",
+              "RelativeToolTip": "PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\LeftRacketBallPositionStrategy.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-04T13:48:26.875Z",
               "EditorCaption": ""
             },
             {
@@ -169,74 +190,61 @@
               "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\BallPositionHelper.cs",
               "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\BallPositionHelper.cs",
               "RelativeToolTip": "PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\BallPositionHelper.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAxwB8AAAAAAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAswBUAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-04T14:02:44.366Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Ball.cs",
-              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\Ball.cs",
-              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\Models\\Ball.cs",
-              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\Ball.cs",
-              "RelativeToolTip": "PongGameWithFuzzyLogic\\Models\\Ball.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAWwBIAAAAlAAAA",
+              "DocumentIndex": 0,
+              "Title": "GameStateFactory.cs",
+              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\GameStateFactory.cs",
+              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\Models\\GameStateFactory.cs",
+              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\GameStateFactory.cs",
+              "RelativeToolTip": "PongGameWithFuzzyLogic\\Models\\GameStateFactory.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAQwBIAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T13:41:31.792Z",
+              "WhenOpened": "2024-09-04T14:16:57.816Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "IBallPositionStrategy.cs",
-              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\IBallPositionStrategy.cs",
-              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\IBallPositionStrategy.cs",
-              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\IBallPositionStrategy.cs",
-              "RelativeToolTip": "PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\IBallPositionStrategy.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAQAAAAtAAAA",
+              "Title": "LeftRacket.cs",
+              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\LeftRacket.cs",
+              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\Models\\LeftRacket.cs",
+              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\LeftRacket.cs",
+              "RelativeToolTip": "PongGameWithFuzzyLogic\\Models\\LeftRacket.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T13:49:02.828Z",
+              "WhenOpened": "2024-09-04T13:38:34.46Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LeftRacketBallPositionStrategy.cs",
-              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\LeftRacketBallPositionStrategy.cs",
-              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\LeftRacketBallPositionStrategy.cs",
-              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\LeftRacketBallPositionStrategy.cs",
-              "RelativeToolTip": "PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\LeftRacketBallPositionStrategy.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T13:48:26.875Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RightRacketBallPositionStrategy.cs",
-              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\RightRacketBallPositionStrategy.cs",
-              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\RightRacketBallPositionStrategy.cs",
-              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\RightRacketBallPositionStrategy.cs",
-              "RelativeToolTip": "PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\RightRacketBallPositionStrategy.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T13:48:43.342Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "GameStates.cs",
               "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\GameStates.cs",
               "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\Models\\GameStates.cs",
               "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\GameStates.cs",
               "RelativeToolTip": "PongGameWithFuzzyLogic\\Models\\GameStates.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAUAAAAXAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAsAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-04T13:55:22.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RightRacketBallPositionStrategy.cs",
+              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\RightRacketBallPositionStrategy.cs",
+              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\RightRacketBallPositionStrategy.cs",
+              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\RightRacketBallPositionStrategy.cs",
+              "RelativeToolTip": "PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\RightRacketBallPositionStrategy.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-04T13:48:43.342Z",
               "EditorCaption": ""
             },
             {
@@ -247,7 +255,7 @@
               "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\PongGame.cs",
               "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\PongGame.cs",
               "RelativeToolTip": "PongGameWithFuzzyLogic\\PongGame.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAQwEAAAABCAAAA",
+              "ViewState": "AQIAADoAAAAAAAAAAAAowEgAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-04T13:38:34.45Z",
               "EditorCaption": ""
@@ -255,32 +263,168 @@
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "GameStateFactory.cs",
-              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\GameStateFactory.cs",
-              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\Models\\GameStateFactory.cs",
-              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\GameStateFactory.cs",
-              "RelativeToolTip": "PongGameWithFuzzyLogic\\Models\\GameStateFactory.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAkAAAAAAAAA",
+              "Title": "RightServedBallPositionStrategy.cs",
+              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\RightServedBallPositionStrategy.cs",
+              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\RightServedBallPositionStrategy.cs",
+              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\RightServedBallPositionStrategy.cs",
+              "RelativeToolTip": "PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\RightServedBallPositionStrategy.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T14:16:57.816Z",
+              "WhenOpened": "2024-09-15T19:28:17.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RightRacket.cs",
+              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\RightRacket.cs",
+              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\Models\\RightRacket.cs",
+              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\RightRacket.cs",
+              "RelativeToolTip": "PongGameWithFuzzyLogic\\Models\\RightRacket.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-04T13:38:34.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MovingBallPositionStrategy.cs",
+              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\MovingBallPositionStrategy.cs",
+              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\MovingBallPositionStrategy.cs",
+              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\MovingBallPositionStrategy.cs",
+              "RelativeToolTip": "PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\MovingBallPositionStrategy.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwBAAAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-04T14:35:38.522Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "Sprite.cs",
-              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\Sprite.cs",
-              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\Models\\Sprite.cs",
-              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\Sprite.cs",
-              "RelativeToolTip": "PongGameWithFuzzyLogic\\Models\\Sprite.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAA3wBoAAAATAAAA",
+              "Title": "Ball.cs",
+              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\Ball.cs",
+              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\Models\\Ball.cs",
+              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\Ball.cs",
+              "RelativeToolTip": "PongGameWithFuzzyLogic\\Models\\Ball.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAA3wB4AAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T13:38:34.54Z",
+              "WhenOpened": "2024-09-04T13:41:31.792Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
+              "Title": "IBallPositionStrategy.cs",
+              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\IBallPositionStrategy.cs",
+              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\IBallPositionStrategy.cs",
+              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\IBallPositionStrategy.cs",
+              "RelativeToolTip": "PongGameWithFuzzyLogic\\Models\\BallPositionStrategies\\IBallPositionStrategy.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-04T13:49:02.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SpritesManager.cs",
+              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\SpritesManager.cs",
+              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\Models\\SpritesManager.cs",
+              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\SpritesManager.cs",
+              "RelativeToolTip": "PongGameWithFuzzyLogic\\Models\\SpritesManager.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwAgAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-04T13:38:34.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Button.cs",
+              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\UiComponents\\Button.cs",
+              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\UiComponents\\Button.cs",
+              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\UiComponents\\Button.cs",
+              "RelativeToolTip": "PongGameWithFuzzyLogic\\UiComponents\\Button.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAMwBMAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-04T13:38:34.539Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Sprite.cs",
+              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\Sprite.cs",
+              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\Models\\Sprite.cs",
+              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\Sprite.cs",
+              "RelativeToolTip": "PongGameWithFuzzyLogic\\Models\\Sprite.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAUwBUAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-04T13:38:34.54Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Racket.cs",
+              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\Racket.cs",
+              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\Models\\Racket.cs",
+              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\Racket.cs",
+              "RelativeToolTip": "PongGameWithFuzzyLogic\\Models\\Racket.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-04T13:38:34.457Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ContentLoader.cs",
+              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\ContentLoader.cs",
+              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\Models\\ContentLoader.cs",
+              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\ContentLoader.cs",
+              "RelativeToolTip": "PongGameWithFuzzyLogic\\Models\\ContentLoader.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAgwBoAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-04T13:38:34.462Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "DefaultPanel.cs",
+              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\UiModels\\DefaultPanel.cs",
+              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\UiModels\\DefaultPanel.cs",
+              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\UiModels\\DefaultPanel.cs",
+              "RelativeToolTip": "PongGameWithFuzzyLogic\\UiModels\\DefaultPanel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-04T13:38:34.456Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Panel.cs",
+              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\UiComponents\\Panel.cs",
+              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\UiComponents\\Panel.cs",
+              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\UiComponents\\Panel.cs",
+              "RelativeToolTip": "PongGameWithFuzzyLogic\\UiComponents\\Panel.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAIAzwB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-04T13:38:34.463Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ViewManager.cs",
+              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\UiModels\\ViewManager.cs",
+              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\UiModels\\ViewManager.cs",
+              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\UiModels\\ViewManager.cs",
+              "RelativeToolTip": "PongGameWithFuzzyLogic\\UiModels\\ViewManager.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAvwDwAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-04T13:38:34.506Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "KeyboardInputStrategies.cs",
               "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\UiComponents\\Strategies\\KeyboardInputStrategies.cs",
               "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\UiComponents\\Strategies\\KeyboardInputStrategies.cs",
@@ -288,12 +432,11 @@
               "RelativeToolTip": "PongGameWithFuzzyLogic\\UiComponents\\Strategies\\KeyboardInputStrategies.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T13:38:34.453Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-04T13:38:34.453Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 21,
               "Title": "KeyboardInputHelper.cs",
               "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\UiComponents\\Helpers\\KeyboardInputHelper.cs",
               "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\UiComponents\\Helpers\\KeyboardInputHelper.cs",
@@ -301,25 +444,11 @@
               "RelativeToolTip": "PongGameWithFuzzyLogic\\UiComponents\\Helpers\\KeyboardInputHelper.cs",
               "ViewState": "AQIAABQAAAAAAAAAAADgvycAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T13:38:34.454Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-04T13:38:34.454Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ContentLoader.cs",
-              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\ContentLoader.cs",
-              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\Models\\ContentLoader.cs",
-              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\ContentLoader.cs",
-              "RelativeToolTip": "PongGameWithFuzzyLogic\\Models\\ContentLoader.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAYwB0AAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T13:38:34.462Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 32,
               "Title": "IKeyboardInputStrategy.cs",
               "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\UiComponents\\Interfaces\\IKeyboardInputStrategy.cs",
               "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\UiComponents\\Interfaces\\IKeyboardInputStrategy.cs",
@@ -331,7 +460,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 23,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Program.cs",
               "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\Program.cs",
@@ -339,25 +468,11 @@
               "RelativeToolTip": "PongGameWithFuzzyLogic\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T13:38:34.455Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-04T13:38:34.455Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "SpritesManager.cs",
-              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\SpritesManager.cs",
-              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\Models\\SpritesManager.cs",
-              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\SpritesManager.cs",
-              "RelativeToolTip": "PongGameWithFuzzyLogic\\Models\\SpritesManager.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAzwBMAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T13:38:34.461Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 29,
               "Title": "DefaultTextLabel.cs",
               "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\UiModels\\DefaultTextLabel.cs",
               "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\UiModels\\DefaultTextLabel.cs",
@@ -369,20 +484,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ViewManager.cs",
-              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\UiModels\\ViewManager.cs",
-              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\UiModels\\ViewManager.cs",
-              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\UiModels\\ViewManager.cs",
-              "RelativeToolTip": "PongGameWithFuzzyLogic\\UiModels\\ViewManager.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAxwAoAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T13:38:34.506Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 27,
               "Title": "DefaultTextBox.cs",
               "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\UiModels\\DefaultTextBox.cs",
               "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\UiModels\\DefaultTextBox.cs",
@@ -394,7 +496,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 25,
               "Title": "TextBox.cs",
               "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\UiComponents\\TextBox.cs",
               "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\UiComponents\\TextBox.cs",
@@ -406,7 +508,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 28,
               "Title": "TextLabel.cs",
               "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\UiComponents\\TextLabel.cs",
               "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\UiComponents\\TextLabel.cs",
@@ -418,7 +520,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 30,
               "Title": "TextPositionStrategies.cs",
               "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\UiComponents\\Strategies\\TextPositionStrategies.cs",
               "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\UiComponents\\Strategies\\TextPositionStrategies.cs",
@@ -430,19 +532,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "DefaultPanel.cs",
-              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\UiModels\\DefaultPanel.cs",
-              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\UiModels\\DefaultPanel.cs",
-              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\UiModels\\DefaultPanel.cs",
-              "RelativeToolTip": "PongGameWithFuzzyLogic\\UiModels\\DefaultPanel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T13:38:34.456Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 24,
               "Title": "DefaultButton.cs",
               "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\UiModels\\DefaultButton.cs",
               "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\UiModels\\DefaultButton.cs",
@@ -454,19 +544,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "Racket.cs",
-              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\Racket.cs",
-              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\Models\\Racket.cs",
-              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\Racket.cs",
-              "RelativeToolTip": "PongGameWithFuzzyLogic\\Models\\Racket.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T13:38:34.457Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 33,
               "Title": "TextPositionHelper.cs",
               "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\UiComponents\\Helpers\\TextPositionHelper.cs",
               "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\UiComponents\\Helpers\\TextPositionHelper.cs",
@@ -478,7 +556,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 31,
               "Title": "TextPosition.cs",
               "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\UiComponents\\TextPosition.cs",
               "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\UiComponents\\TextPosition.cs",
@@ -490,43 +568,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "LeftRacket.cs",
-              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\LeftRacket.cs",
-              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\Models\\LeftRacket.cs",
-              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\LeftRacket.cs",
-              "RelativeToolTip": "PongGameWithFuzzyLogic\\Models\\LeftRacket.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAA1wCIAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T13:38:34.46Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "RightRacket.cs",
-              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\RightRacket.cs",
-              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\Models\\RightRacket.cs",
-              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\Models\\RightRacket.cs",
-              "RelativeToolTip": "PongGameWithFuzzyLogic\\Models\\RightRacket.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBgAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T13:38:34.461Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Panel.cs",
-              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\UiComponents\\Panel.cs",
-              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\UiComponents\\Panel.cs",
-              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\UiComponents\\Panel.cs",
-              "RelativeToolTip": "PongGameWithFuzzyLogic\\UiComponents\\Panel.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAjwDAAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T13:38:34.463Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 26,
               "Title": "Component.cs",
               "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\UiComponents\\Component.cs",
               "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\UiComponents\\Component.cs",
@@ -535,18 +577,6 @@
               "ViewState": "AQIAAD0AAAAAAAAAAAAcwEMAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-04T13:38:34.538Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Button.cs",
-              "DocumentMoniker": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\UiComponents\\Button.cs",
-              "RelativeDocumentMoniker": "PongGameWithFuzzyLogic\\UiComponents\\Button.cs",
-              "ToolTip": "C:\\Users\\Kornik\\Desktop\\Projects\\C#\\PongGameWithFuzzyLogic\\PongGameWithFuzzyLogic\\UiComponents\\Button.cs",
-              "RelativeToolTip": "PongGameWithFuzzyLogic\\UiComponents\\Button.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAIA0wBMAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T13:38:34.539Z"
             }
           ]
         }

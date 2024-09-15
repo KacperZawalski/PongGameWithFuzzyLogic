@@ -35,11 +35,11 @@ namespace PongGameWithFuzzyLogic.Models
         }
         private bool IsWithinUpperBound()
         {
-            return Position.Y - texture.Width / 2 * Scale > _pongGame.ViewManager.GamePanel.Position.Y;
+            return Position.Y - Texture.Width / 2 * Scale > _pongGame.ViewManager.GamePanel.Position.Y;
         }
         private bool IsWithinLowerBound()
         {
-            return Position.Y + texture.Width / 2 * Scale < _pongGame.ViewManager.GamePanel.Position.Y + _pongGame.ViewManager.GamePanel.Dimensions.Y;
+            return Position.Y + Texture.Width / 2 * Scale < _pongGame.ViewManager.GamePanel.Position.Y + _pongGame.ViewManager.GamePanel.Dimensions.Y;
         }
     }
 }

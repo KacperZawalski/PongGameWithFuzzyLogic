@@ -9,9 +9,12 @@ namespace PongGameWithFuzzyLogic
 {
     public class PongGame : Game
     {
-        public ViewManager ViewManager;
         public const int GameWindowWidth = 1000;
         public const int GameWindowHeight = 800;
+        public Ball Ball { get; set; }
+        public LeftRacket LeftRacket { get; set; }
+        public RightRacket RightRacket { get; set; }
+        public ViewManager ViewManager { get; internal set; }
         private SpriteBatch spriteBatch;
         private ContentLoader contentLoader;
         private SpritesManager spritesManager;
@@ -23,7 +26,7 @@ namespace PongGameWithFuzzyLogic
                 return gameState;
             }
         }
-        private GameState gameState = GameState.WaitingForServe;
+        private GameState gameState = GameState.FirstServe;
 
         public PongGame()
         {
@@ -37,10 +40,14 @@ namespace PongGameWithFuzzyLogic
 
         protected override void Initialize()
         {
+            ViewManager = new ViewManager(this);
+            contentLoader = new ContentLoader(this);
+            spritesManager = new SpritesManager(this);
+
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            Components.Add(ViewManager = new ViewManager(this));
-            Components.Add(contentLoader = new ContentLoader(this));
-            Components.Add(spritesManager = new SpritesManager(this));
+            Components.Add(ViewManager);
+            Components.Add(contentLoader);
+            Components.Add(spritesManager);
 
             base.Initialize();
         }
@@ -48,7 +55,7 @@ namespace PongGameWithFuzzyLogic
 
         protected override void LoadContent()
         {
-            spritesManager.Sprites = contentLoader.GetSprites();
+            spritesManager.Sprites.AddRange(contentLoader.GetSprites());
         }
 
         protected override void Update(GameTime gameTime)
@@ -62,7 +69,7 @@ namespace PongGameWithFuzzyLogic
 
         private void UpdateGameState()
         {
-            gameState = new GameStateFactory().GetGameState(this);
+            gameState = GameStateFactory.GetGameState(this);
         }
 
         protected override void Draw(GameTime gameTime)
