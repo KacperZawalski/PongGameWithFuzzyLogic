@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 using System.Collections.Generic;
 
 namespace PongGameWithFuzzyLogic.Models
@@ -14,7 +15,9 @@ namespace PongGameWithFuzzyLogic.Models
         }
         public void Initialize()
         {
+            SetRacketsPositions();
         }
+
         public void DrawSprites(GameTime gameTime, SpriteBatch spriteBatch)
         {
             foreach (var sprite in Sprites)
@@ -29,6 +32,13 @@ namespace PongGameWithFuzzyLogic.Models
             {
                 sprite.Update(gameTime, spriteBatch);
             }
+        }
+        private void SetRacketsPositions()
+        {
+            var Y = _pongGame.ViewManager.GamePanel.Dimensions.Y / 2 + _pongGame.ViewManager.GamePanel.Position.Y;
+            _pongGame.LeftRacket.Position = new Vector2(20, Y);
+
+            _pongGame.RightRacket.Position = new Vector2(_pongGame.ViewManager.GamePanel.Dimensions.X - 20, Y);
         }
     }
 }

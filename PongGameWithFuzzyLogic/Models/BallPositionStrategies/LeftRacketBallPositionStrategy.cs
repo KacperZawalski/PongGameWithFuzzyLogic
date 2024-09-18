@@ -6,8 +6,7 @@ namespace PongGameWithFuzzyLogic.Models.BallPositionStrategies
     {
         public void SetBallPosition(Ball ball, PongGame pongGame)
         {
-            var x = pongGame.LeftRacket.Position.X + pongGame.LeftRacket.Texture.Height * pongGame.LeftRacket.Scale + ball.Diameter / 2;
-            ball.Position = new Vector2(x, pongGame.LeftRacket.Position.Y);
+            ball.Position = new Vector2(pongGame.LeftRacket.Rectangle.Right, pongGame.LeftRacket.Rectangle.Center.Y - ball.Rectangle.Width / 2);  
             ball.Moving = false;
         }
     }

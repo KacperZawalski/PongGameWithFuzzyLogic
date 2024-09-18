@@ -1,25 +1,17 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using PongGameWithFuzzyLogic.Models.BallPositionStrategies;
-using System.Diagnostics;
 
 namespace PongGameWithFuzzyLogic.Models
 {
     public class Ball : Sprite
     {
         public bool Moving { get; set; }
-        public Rectangle Rectangle
-        {
-            get
-            {
-                return new Rectangle(Position.ToPoint(), new Point((int)Diameter, (int)Diameter));
-            }
-        }
-
-        public float Diameter => Texture.Width * Scale;
+        public float Diameter => Rectangle.Width;
+        public float Radius => Rectangle.Width / 2;
         public int Velocity { get; } = 5;
         public Vector2 Direction { get; set; }
-        private readonly PongGame _pongGame;   
+        private readonly PongGame _pongGame;
         public Ball(Texture2D texture, PongGame pongGame) : base(texture)
         {
             Scale = 0.3f;
@@ -30,7 +22,6 @@ namespace PongGameWithFuzzyLogic.Models
         public override void Update(GameTime gameTime, SpriteBatch spriteBatch)
         {
             BallPositionHelper.SetBallPosition(this, _pongGame);
-            Debug.WriteLine("Ball: " + Position);
         }
     }
 }

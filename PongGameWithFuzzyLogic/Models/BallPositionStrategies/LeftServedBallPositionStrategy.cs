@@ -9,8 +9,8 @@ namespace PongGameWithFuzzyLogic.Models.BallPositionStrategies
         {
             ball.Moving = true;
             var rand = new Random();
-            ball.Direction = new Vector2(ball.Velocity, ball.Direction.Y);
-            ball.Position = new Vector2(ball.Position.X + ball.Velocity, ball.Position.Y + rand.Next() % 16 - 8);
+            ball.Direction = new Vector2(ball.Velocity, rand.Next() % 16 - 8);
+            ball.Position += ball.Direction;
         }
     }
 }

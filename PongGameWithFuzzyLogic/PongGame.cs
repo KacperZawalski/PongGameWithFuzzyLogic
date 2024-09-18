@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Input;
 using PongGameWithFuzzyLogic.Models;
 using PongGameWithFuzzyLogic.UiModels;
 using System;
+using System.Diagnostics;
 
 namespace PongGameWithFuzzyLogic
 {
@@ -12,8 +13,8 @@ namespace PongGameWithFuzzyLogic
         public const int GameWindowWidth = 1000;
         public const int GameWindowHeight = 800;
         public Ball Ball { get; set; }
-        public LeftRacket LeftRacket { get; set; }
-        public RightRacket RightRacket { get; set; }
+        public Racket LeftRacket { get; set; }
+        public Racket RightRacket { get; set; }
         public ViewManager ViewManager { get; internal set; }
         private SpriteBatch spriteBatch;
         private ContentLoader contentLoader;
@@ -63,7 +64,6 @@ namespace PongGameWithFuzzyLogic
             UpdateGameState();
             ViewManager.UpdateComponents(gameTime, spriteBatch);
             spritesManager.UpdateSprites(gameTime, spriteBatch);
-
             base.Update(gameTime);
         }
 

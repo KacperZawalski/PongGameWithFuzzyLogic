@@ -1,5 +1,4 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
@@ -41,8 +40,8 @@ namespace PongGameWithFuzzyLogic.Models
         {
             var racketTexture = _pongGame.Content.Load<Texture2D>("racket");
 
-            _pongGame.LeftRacket = new LeftRacket(racketTexture, _pongGame);
-            _pongGame.RightRacket = new RightRacket(racketTexture, _pongGame);
+            _pongGame.LeftRacket = new Racket(racketTexture, _pongGame);
+            _pongGame.RightRacket = new Racket(racketTexture, _pongGame);
 
             Sprites.Add(_pongGame.LeftRacket);
             Sprites.Add(_pongGame.RightRacket);
