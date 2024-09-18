@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using System.Diagnostics;
 
 namespace PongGameWithFuzzyLogic.Models.BallPositionStrategies
 {
@@ -16,13 +17,15 @@ namespace PongGameWithFuzzyLogic.Models.BallPositionStrategies
             {
                 ball.Direction = new Vector2(ball.Direction.X, -ball.Velocity);
             }
-            else if (pongGame.RightRacket.Rectangle.Intersects(ball.Rectangle))
+            if (pongGame.RightRacket.Rectangle.Intersects(ball.Rectangle))
             {
                 ball.Direction = new Vector2(-ball.Velocity, ball.Direction.Y);
+                Debug.WriteLine("Right colision");
             }
             else if (pongGame.LeftRacket.Rectangle.Intersects(ball.Rectangle))
             {
                 ball.Direction = new Vector2(ball.Velocity, ball.Direction.Y);
+                Debug.WriteLine("Left colision");
             }
 
             ball.Position = new Vector2(ball.Position.X + ball.Direction.X, ball.Position.Y + ball.Direction.Y);

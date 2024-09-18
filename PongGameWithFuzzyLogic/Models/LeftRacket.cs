@@ -26,11 +26,11 @@ namespace PongGameWithFuzzyLogic.Models
             
             if (keyboardState.IsKeyDown(Keys.W) && IsWithinUpperBound())
             {
-                Position = new Vector2(Position.X, Position.Y - Sensitivity); 
+                Position = new Vector2(Position.X, Position.Y - MovementSensitivity); 
             }
             if (keyboardState.IsKeyDown(Keys.S) && IsWithinLowerBound())
             {
-                Position = new Vector2(Position.X, Position.Y + Sensitivity);
+                Position = new Vector2(Position.X, Position.Y + MovementSensitivity);
             }
         }
         private bool IsWithinUpperBound()

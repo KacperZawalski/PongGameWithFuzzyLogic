@@ -9,14 +9,14 @@ namespace PongGameWithFuzzyLogic.Models
         {
             get
             {
-                return new Rectangle(Position.ToPoint(), new Point(Texture.Height, Texture.Width));
+                return new Rectangle(Position.ToPoint(), new Point(Texture.Width * (int)Scale, Texture.Height * (int)Scale));
             }
         }
         protected readonly PongGame _pongGame;
-        public int Sensitivity { get; set; }
+        public int MovementSensitivity { get; set; }
         public Racket(Texture2D texture, PongGame pongGame) : base(texture)
         {
-            Sensitivity = 6;
+            MovementSensitivity = 6;
             Rotation = MathHelper.ToRadians(90);
             Scale = 0.2f;
             _pongGame = pongGame;
