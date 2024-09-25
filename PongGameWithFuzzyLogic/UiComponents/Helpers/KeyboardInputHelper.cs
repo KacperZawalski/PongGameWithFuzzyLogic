@@ -1,7 +1,6 @@
 ﻿using Microsoft.Xna.Framework.Input;
 using PongGameWithFuzzyLogic.UiComponents.Interfaces;
 using PongGameWithFuzzyLogic.UiComponents.Strategies;
-using System.Linq;
 
 namespace PongGameWithFuzzyLogic.UiComponents.Helpers
 {
@@ -13,7 +12,7 @@ namespace PongGameWithFuzzyLogic.UiComponents.Helpers
 
             if (pressedKey == Keys.Back)
             {
-                strategy =  new KeyboardInputBackStrategy();
+                strategy = new KeyboardInputBackStrategy();
             }
             else if (pressedKey == Keys.Left)
             {

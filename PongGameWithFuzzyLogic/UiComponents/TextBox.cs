@@ -12,7 +12,7 @@ namespace PongGameWithFuzzyLogic.UiComponents
         public char CursorCharacter { get; set; } = '|';
         public bool CursorMissing { get; set; } = true;
         public int CursorPosition { get; set; }
-        
+
         public bool Focused { get; set; }
         private Action _textChangedAction;
         private bool _acceptInput;

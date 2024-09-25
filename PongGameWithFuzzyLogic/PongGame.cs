@@ -1,10 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
 using PongGameWithFuzzyLogic.Models;
 using PongGameWithFuzzyLogic.UiModels;
-using System;
-using System.Diagnostics;
 
 namespace PongGameWithFuzzyLogic
 {
@@ -23,8 +20,8 @@ namespace PongGameWithFuzzyLogic
         private SpritesManager spritesManager;
         private readonly GraphicsDeviceManager _graphics;
 
-        public GameState GameState 
-        { 
+        public GameState GameState
+        {
             get
             {
                 return gameState;

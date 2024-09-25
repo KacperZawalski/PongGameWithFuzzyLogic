@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace PongGameWithFuzzyLogic.Models.BallPositionStrategies
+﻿namespace PongGameWithFuzzyLogic.Models.BallPositionStrategies
 {
     public static class BallPositionHelper
     {

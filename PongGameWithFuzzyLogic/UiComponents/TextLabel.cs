@@ -15,7 +15,7 @@ namespace PongGameWithFuzzyLogic.UiComponents
         public int PaddingLeft { get; set; }
         public Color HoverColor { get; set; }
         public Color HoverTextColor { get; set; }
-        public Color TextColor  
+        public Color TextColor
         {
             get => _textColor;
             set

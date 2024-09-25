@@ -3,7 +3,6 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using PongGameWithFuzzyLogic.Models;
 using PongGameWithFuzzyLogic.UiComponents;
-using System;
 using System.Collections.Generic;
 
 namespace PongGameWithFuzzyLogic.UiModels
@@ -67,7 +66,7 @@ namespace PongGameWithFuzzyLogic.UiModels
                 //TODO Add AI controls
                 _pongGame.RightRacket.IsControlledByAi = true;
             });
-            pvpButton.SetClickAction(() => 
+            pvpButton.SetClickAction(() =>
             {
                 _pongGame.RightRacket.IsControlledByAi = false;
                 _pongGame.RightRacket.MoveUp = Keys.Up;
