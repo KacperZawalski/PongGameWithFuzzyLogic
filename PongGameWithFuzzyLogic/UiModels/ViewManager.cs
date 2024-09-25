@@ -12,7 +12,7 @@ namespace PongGameWithFuzzyLogic.UiModels
         private readonly PongGame _pongGame;
         private readonly List<Component> _components = new List<Component>();
         private readonly SpriteFont _font14;
-        private readonly SpriteFont _font24;
+        private readonly SpriteFont _font48;
         private DefaultButton pvpButton;
         private DefaultButton pveButton;
         private DefaultButton restartGameButton;
@@ -23,7 +23,7 @@ namespace PongGameWithFuzzyLogic.UiModels
         {
             _pongGame = pongGame;
             _font14 = pongGame.Content.Load<SpriteFont>("font14");
-            _font24 = pongGame.Content.Load<SpriteFont>("font24");
+            _font48 = pongGame.Content.Load<SpriteFont>("font48");
         }
 
         public void Initialize()
@@ -53,9 +53,9 @@ namespace PongGameWithFuzzyLogic.UiModels
 
         private void CreateLabels()
         {
-            var x = TopPanel.Dimensions.X / 2;
-            var y = TopPanel.Position.Y + 10;
-            scoreLabel = new DefaultTextLabel(_font24, new Vector2(100, 40), new Vector2(x, y), _pongGame.GraphicsDevice);
+            var x = TopPanel.Dimensions.X / 2 - 50;
+            var y = TopPanel.Dimensions.Y / 2 - 20;
+            scoreLabel = new DefaultTextLabel(_font48, new Vector2(100, 40), new Vector2(x, y), _pongGame.GraphicsDevice);
             scoreLabel.Text = "0:0";
         }
 

@@ -88,6 +88,13 @@
 /processorParam:TextureFormat=Compressed
 /build:font24.spritefont
 
+#begin font48.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:font48.spritefont
+
 #begin font8.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor
