@@ -12,6 +12,8 @@ namespace PongGameWithFuzzyLogic
     {
         public const int GameWindowWidth = 1000;
         public const int GameWindowHeight = 800;
+        public int LeftScore { get; set; }
+        public int RightScore { get; set; }
         public Ball Ball { get; set; }
         public Racket LeftRacket { get; set; }
         public Racket RightRacket { get; set; }
@@ -20,6 +22,7 @@ namespace PongGameWithFuzzyLogic
         private ContentLoader contentLoader;
         private SpritesManager spritesManager;
         private readonly GraphicsDeviceManager _graphics;
+
         public GameState GameState 
         { 
             get
@@ -37,6 +40,12 @@ namespace PongGameWithFuzzyLogic
             _graphics.ApplyChanges();
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+        }
+        public void Restart()
+        {
+            gameState = GameState.FirstServe;
+            RightScore = 0;
+            LeftScore = 0;
         }
 
         protected override void Initialize()
@@ -64,6 +73,7 @@ namespace PongGameWithFuzzyLogic
             UpdateGameState();
             ViewManager.UpdateComponents(gameTime, spriteBatch);
             spritesManager.UpdateSprites(gameTime, spriteBatch);
+
             base.Update(gameTime);
         }
 

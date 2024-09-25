@@ -1,6 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+using PongGameWithFuzzyLogic.Models;
 using PongGameWithFuzzyLogic.UiComponents;
+using System;
 using System.Collections.Generic;
 
 namespace PongGameWithFuzzyLogic.UiModels
@@ -9,58 +12,70 @@ namespace PongGameWithFuzzyLogic.UiModels
     {
         private readonly PongGame _pongGame;
         private readonly List<Component> _components = new List<Component>();
-        private readonly SpriteFont _font;
+        private readonly SpriteFont _font14;
+        private readonly SpriteFont _font24;
         private DefaultButton pvpButton;
         private DefaultButton pveButton;
-        private DefaultTextBox racketSpeedTextBox;
-        private DefaultTextLabel racketSpeedLabel;
+        private DefaultButton restartGameButton;
+        private DefaultTextLabel scoreLabel;
         public DefaultPanel TopPanel { get; internal set; }
         public DefaultPanel GamePanel { get; internal set; }
         public ViewManager(PongGame pongGame)
         {
             _pongGame = pongGame;
-            _font = pongGame.Content.Load<SpriteFont>("font14");
+            _font14 = pongGame.Content.Load<SpriteFont>("font14");
+            _font24 = pongGame.Content.Load<SpriteFont>("font24");
         }
 
         public void Initialize()
         {
             CreatePanels();
             CreateButtons();
+            CreateLabels();
+            AddEventListenersToButtons();
             AddButtonsToPanels();
-            CreateTextBoxes();
-            CreateTextLabels();
-            AddTextLabelsToPanels();
-            AddTextBoxesToPanels();
+            AddLabelsToPanels();
             AddPanelsToGame();
         }
-
-        private void AddTextLabelsToPanels()
+        public void DrawComponents(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            TopPanel.Add(racketSpeedLabel);
+            _components.ForEach(component => component.Draw(gameTime, spriteBatch));
+        }
+        public void UpdateComponents(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+            UpdateScore();
+            _components.ForEach(component => component.Update(gameTime, spriteBatch));
         }
 
-        private void CreateTextLabels()
+        private void AddLabelsToPanels()
         {
-            racketSpeedLabel = new DefaultTextLabel(_font, new Vector2(200, 30), new Vector2(530, 10), _pongGame.GraphicsDevice);
-            racketSpeedLabel.Text = "Racket movement speed";
-
+            TopPanel.Add(scoreLabel);
         }
 
-        private void AddTextBoxesToPanels()
+        private void CreateLabels()
         {
-            TopPanel.Add(racketSpeedTextBox);
+            var x = TopPanel.Dimensions.X / 2;
+            var y = TopPanel.Position.Y + 10;
+            scoreLabel = new DefaultTextLabel(_font24, new Vector2(100, 40), new Vector2(x, y), _pongGame.GraphicsDevice);
+            scoreLabel.Text = "0:0";
         }
 
-        private void CreateTextBoxes()
+        private void AddEventListenersToButtons()
         {
-            racketSpeedTextBox = new DefaultTextBox(_font, new Vector2(50, 30), new Vector2(750, 10), _pongGame.GraphicsDevice);
-            racketSpeedTextBox.Text = "5";
-            racketSpeedTextBox.SetTextChangeAction(() =>
+            pveButton.SetClickAction(() =>
             {
-                //if (!int.TryParse(racketSpeedTextBox.Text, out int result) && racketSpeedTextBox.Text != string.Empty)
-                //{
-                //    racketSpeedTextBox.Text = racketSpeedTextBox.Text.Substring(0, racketSpeedTextBox.Text.Length - 2);
-                //}
+                //TODO Add AI controls
+                _pongGame.RightRacket.IsControlledByAi = true;
+            });
+            pvpButton.SetClickAction(() => 
+            {
+                _pongGame.RightRacket.IsControlledByAi = false;
+                _pongGame.RightRacket.MoveUp = Keys.Up;
+                _pongGame.RightRacket.MoveDown = Keys.Down;
+            });
+            restartGameButton.SetClickAction(() =>
+            {
+                _pongGame.Restart();
             });
         }
 
@@ -84,30 +99,36 @@ namespace PongGameWithFuzzyLogic.UiModels
         {
             TopPanel.Add(pvpButton);
             TopPanel.Add(pveButton);
+            TopPanel.Add(restartGameButton);
         }
 
         private void CreateButtons()
         {
-            pvpButton = new DefaultButton(_font, new Vector2(150, 40), new Vector2(830, 10), _pongGame.GraphicsDevice);
+            pvpButton = new DefaultButton(_font14, new Vector2(150, 40), new Vector2(830, 10), _pongGame.GraphicsDevice);
             pvpButton.Text = "Player vs Player";
-            pveButton = new DefaultButton(_font, new Vector2(150, 40), new Vector2(830, 60), _pongGame.GraphicsDevice);
+            pveButton = new DefaultButton(_font14, new Vector2(150, 40), new Vector2(830, 60), _pongGame.GraphicsDevice);
             pveButton.Text = "Player vs AI";
+
+            restartGameButton = new DefaultButton(_font14, new Vector2(150, 40), new Vector2(670, 10), _pongGame.GraphicsDevice);
+            restartGameButton.Text = "Restart game";
         }
 
-        public void DrawComponents(GameTime gameTime, SpriteBatch spriteBatch)
+        private void UpdateScore()
         {
-            foreach (var component in _components)
+            switch (_pongGame.GameState)
             {
-                component.Draw(gameTime, spriteBatch);
+                case GameState.LeftScored:
+                    _pongGame.LeftScore++;
+                    break;
+                case GameState.RightScored:
+                    _pongGame.RightScore++;
+                    break;
+                case GameState.FirstServe:
+                    _pongGame.LeftScore = 0;
+                    _pongGame.RightScore = 0;
+                    break;
             }
-        }
-
-        public void UpdateComponents(GameTime gameTime, SpriteBatch spriteBatch)
-        {
-            foreach (var component in _components)
-            {
-                component.Update(gameTime, spriteBatch);
-            }
+            scoreLabel.Text = $"{_pongGame.LeftScore}:{_pongGame.RightScore}";
         }
     }
 }
