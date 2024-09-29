@@ -1,7 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using PongGameWithFuzzyLogic.Models;
 using PongGameWithFuzzyLogic.UiModels;
+using System.Diagnostics;
 
 namespace PongGameWithFuzzyLogic
 {
@@ -71,6 +73,7 @@ namespace PongGameWithFuzzyLogic
             ViewManager.UpdateComponents(gameTime, spriteBatch);
             spritesManager.UpdateSprites(gameTime, spriteBatch);
 
+            Debug.WriteLine(Mouse.GetState().Position);
             base.Update(gameTime);
         }
 

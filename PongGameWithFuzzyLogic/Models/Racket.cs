@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using PongGameWithFuzzyLogic.Models.FuzzyLogic;
 using System;
 
 namespace PongGameWithFuzzyLogic.Models
@@ -20,26 +21,15 @@ namespace PongGameWithFuzzyLogic.Models
         }
         public override void Update(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            var keyboardState = Keyboard.GetState();
-
-            HandleMovement(keyboardState, MoveUp, -MovementSensitivity, IsWithinUpperBound);
-            HandleMovement(keyboardState, MoveDown, MovementSensitivity, IsWithinLowerBound);
-        }
-        private void HandleMovement(KeyboardState keyboardState, Keys key, float movement, Func<bool> boundaryCheck)
-        {
-            if (!IsControlledByAi && keyboardState.IsKeyDown(key) && boundaryCheck())
+            if (IsControlledByAi)
             {
-                Position = new Vector2(Position.X, Position.Y + movement);
+                new AiControls(this, _pongGame.Ball).HandleControls();
+            }
+            else
+            {
+                new RacketControls(this, _pongGame).HandleControls();
             }
         }
-
-        private bool IsWithinUpperBound()
-        {
-            return Position.Y > _pongGame.ViewManager.GamePanel.Position.Y + _pongGame.ViewManager.GamePanel.BorderWidth / 2;
-        }
-        private bool IsWithinLowerBound()
-        {
-            return Position.Y + Rectangle.Height < _pongGame.ViewManager.GamePanel.Position.Y + _pongGame.ViewManager.GamePanel.Dimensions.Y;
-        }
+        
     }
 }
