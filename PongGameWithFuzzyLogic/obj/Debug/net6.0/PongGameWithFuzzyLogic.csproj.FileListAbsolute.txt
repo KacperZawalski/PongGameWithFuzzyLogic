@@ -79,3 +79,5 @@ C:\Users\Kornik\Desktop\Projects\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogi
 C:\Users\Kornik\Desktop\Projects\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogic\obj\Debug\net6.0\PongGameWithFuzzyLogic.pdb
 C:\Users\Kornik\Desktop\Projects\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogic\obj\Debug\net6.0\PongGameWithFuzzyLogic.genruntimeconfig.cache
 C:\Users\Kornik\Desktop\Projects\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogic\obj\Debug\net6.0\ref\PongGameWithFuzzyLogic.dll
+C:\Users\Kornik\Desktop\Projects\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogic\bin\Debug\net6.0\Content\font40.spritefont
+C:\Users\Kornik\Desktop\Projects\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogic\bin\Debug\net6.0\Content\font40.xnb
