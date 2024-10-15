@@ -5,7 +5,15 @@
     {
         public override double GetMembership(int distance)
         {
-            throw new System.NotImplementedException();
+            switch (distance)
+            {
+                case <= 100:
+                    return 1d;
+                case > 100 and <= 120:
+                    return TermHelper.CalculateDescendingSlope(100, 120, distance);
+                default:
+                    return 0d;
+            }
         }
 
         protected override void InitializeValues()
