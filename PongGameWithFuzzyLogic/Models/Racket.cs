@@ -2,7 +2,6 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using PongGameWithFuzzyLogic.Models.FuzzyLogic;
-using System;
 
 namespace PongGameWithFuzzyLogic.Models
 {
@@ -15,21 +14,29 @@ namespace PongGameWithFuzzyLogic.Models
         public int MovementSensitivity { get; set; }
         public Racket(Texture2D texture, PongGame pongGame) : base(texture)
         {
-            MovementSensitivity = 6;
-            Scale = 0.2f;
+            MovementSensitivity = 9;
+            Scale = 0.1f;
             _pongGame = pongGame;
         }
         public override void Update(GameTime gameTime, SpriteBatch spriteBatch)
         {
             if (IsControlledByAi)
             {
-                new AiControls(this, _pongGame.Ball).HandleControls();
+                new AiControls(this, _pongGame).HandleControls();
             }
             else
             {
                 new RacketControls(this, _pongGame).HandleControls();
             }
         }
-        
+        public bool IsWithinUpperBound()
+        {
+            return Position.Y > _pongGame.ViewManager.GamePanel.Position.Y + _pongGame.ViewManager.GamePanel.BorderWidth / 2;
+        }
+        public bool IsWithinLowerBound()
+        {
+            return Position.Y + Rectangle.Height < _pongGame.ViewManager.GamePanel.Position.Y + _pongGame.ViewManager.GamePanel.Dimensions.Y;
+        }
+
     }
 }

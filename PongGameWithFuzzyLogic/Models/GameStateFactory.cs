@@ -21,7 +21,7 @@ namespace PongGameWithFuzzyLogic.Models
             {
                 return GameState.Running;
             }
-            else if (Keyboard.GetState().IsKeyDown(Keys.Space))
+            else if (Keyboard.GetState().IsKeyDown(Keys.Space) || pongGame.LeftRacket.IsControlledByAi)
             {
                 return GameState.LeftServed;
             }
@@ -29,7 +29,7 @@ namespace PongGameWithFuzzyLogic.Models
             {
                 return GameState.WaitingForLeft;
             }
-            else if (Keyboard.GetState().IsKeyDown(Keys.Enter))
+            else if (Keyboard.GetState().IsKeyDown(Keys.Enter) || pongGame.RightRacket.IsControlledByAi)
             {
                 return GameState.RightServed;
             }

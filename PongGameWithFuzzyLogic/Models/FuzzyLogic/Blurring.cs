@@ -1,17 +1,18 @@
-﻿using Microsoft.Xna.Framework;
-using System;
+﻿using PongGameWithFuzzyLogic.Models.FuzzyLogic.Terms;
 using System.Collections.Generic;
 
 namespace PongGameWithFuzzyLogic.Models.FuzzyLogic
 {
     public sealed class Blurring
-    { 
-        public Blurring() 
+    {
+        public double[] BlurrInput(double distance, List<ITerm> terms)
         {
-        }
-        public void BlurrInput(double distance)
-        {
-
+            double[] results = new double[terms.Count];
+            for (int i = 0; i < terms.Count; i++)
+            {
+                results[i] = terms[i].GetMembership(distance);
+            }
+            return results;
         }
     }
 }

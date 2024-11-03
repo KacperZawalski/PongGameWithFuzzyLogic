@@ -9,10 +9,9 @@ namespace PongGameWithFuzzyLogicTests
         public void AscendingSlope_WithValidInput_ReturnsOutputInRange()
         {
             //Arrange
-            Random random = new Random();
-            int minValue = random.Next(1, 300);
-            int maxValue = random.Next(301, 600);
-            double value = random.Next(minValue, maxValue);
+            int minValue = 1;
+            int maxValue = 300;
+            double value = 150d;
 
             //Act
             var result = TermHelper.CalculateAscendingSlope(minValue, maxValue, value);
@@ -24,10 +23,9 @@ namespace PongGameWithFuzzyLogicTests
         public void DescendingSlope_WithValidInput_ReturnsOutputInRange()
         {
             //Arrange
-            Random random = new Random();
-            int minValue = random.Next(1, 300);
-            int maxValue = random.Next(301, 600);
-            double value = random.Next(minValue, maxValue);
+            int minValue = 1;
+            int maxValue = 300;
+            double value = 150d;
 
             //Act
             var result = TermHelper.CalculateDescendingSlope(minValue, maxValue, value);

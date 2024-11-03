@@ -1,9 +1,9 @@
 ﻿namespace PongGameWithFuzzyLogic.Models.FuzzyLogic.Terms
 {
     //280-300-400-420
-    public sealed class LongDistanceTerm : Term
+    public sealed class LongDistanceTerm : ITerm
     {
-        public override double GetMembership(int distance)
+        public double GetMembership(double distance)
         {
             switch (distance)
             {
@@ -16,11 +16,6 @@
                 default:
                     return 0d;
             }
-        }
-
-        protected override void InitializeValues()
-        {
-            throw new System.NotImplementedException();
         }
     }
 }

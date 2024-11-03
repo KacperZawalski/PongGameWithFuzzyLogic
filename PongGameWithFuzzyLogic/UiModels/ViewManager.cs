@@ -15,6 +15,7 @@ namespace PongGameWithFuzzyLogic.UiModels
         private readonly SpriteFont _font40;
         private DefaultButton pvpButton;
         private DefaultButton pveButton;
+        private DefaultButton eveButton;
         private DefaultButton restartGameButton;
         private DefaultTextLabel scoreValueLabel;
         private DefaultTextLabel descriptionScoreLabel;
@@ -71,14 +72,20 @@ namespace PongGameWithFuzzyLogic.UiModels
         {
             pveButton.SetClickAction(() =>
             {
-                //TODO Add AI controls
+                _pongGame.LeftRacket.IsControlledByAi = false;
                 _pongGame.RightRacket.IsControlledByAi = true;
             });
             pvpButton.SetClickAction(() =>
             {
                 _pongGame.RightRacket.IsControlledByAi = false;
+                _pongGame.LeftRacket.IsControlledByAi = false;
                 _pongGame.RightRacket.MoveUp = Keys.Up;
                 _pongGame.RightRacket.MoveDown = Keys.Down;
+            });
+            eveButton.SetClickAction(() =>
+            {
+                _pongGame.RightRacket.IsControlledByAi = true;
+                _pongGame.LeftRacket.IsControlledByAi = true;
             });
             restartGameButton.SetClickAction(() =>
             {
@@ -106,6 +113,7 @@ namespace PongGameWithFuzzyLogic.UiModels
         {
             TopPanel.Add(pvpButton);
             TopPanel.Add(pveButton);
+            TopPanel.Add(eveButton);
             TopPanel.Add(restartGameButton);
         }
 
@@ -113,8 +121,12 @@ namespace PongGameWithFuzzyLogic.UiModels
         {
             pvpButton = new DefaultButton(_font14, new Vector2(150, 40), new Vector2(830, 10), _pongGame.GraphicsDevice);
             pvpButton.Text = "Player vs Player";
+            
             pveButton = new DefaultButton(_font14, new Vector2(150, 40), new Vector2(830, 60), _pongGame.GraphicsDevice);
             pveButton.Text = "Player vs AI";
+
+            eveButton = new DefaultButton(_font14, new Vector2(150, 40), new Vector2(670, 60), _pongGame.GraphicsDevice);
+            eveButton.Text = "AI vs AI";
 
             restartGameButton = new DefaultButton(_font14, new Vector2(150, 40), new Vector2(670, 10), _pongGame.GraphicsDevice);
             restartGameButton.Text = "Restart game";

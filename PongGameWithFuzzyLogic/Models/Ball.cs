@@ -14,7 +14,7 @@ namespace PongGameWithFuzzyLogic.Models
         private readonly PongGame _pongGame;
         public Ball(Texture2D texture, PongGame pongGame) : base(texture)
         {
-            Scale = 0.3f;
+            Scale = 0.2f;
             _pongGame = pongGame;
             Direction = new Vector2(Velocity, Velocity);
             Position = new Vector2(300, 300);
