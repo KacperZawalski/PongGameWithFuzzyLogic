@@ -85,3 +85,4 @@ C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogi
 C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogic\bin\Debug\net6.0\Content\font48.spritefont
 C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogic\bin\Debug\net6.0\Content\font40.xnb
 C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogic\bin\Debug\net6.0\Content\font48.xnb
+C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogic\bin\Debug\net6.0\Content\font30.xnb

@@ -12,6 +12,7 @@ namespace PongGameWithFuzzyLogic.UiModels
         private readonly PongGame _pongGame;
         private readonly List<Component> _components = new List<Component>();
         private readonly SpriteFont _font14;
+        private readonly SpriteFont _font30;
         private readonly SpriteFont _font40;
         private DefaultButton pvpButton;
         private DefaultButton pveButton;
@@ -25,6 +26,7 @@ namespace PongGameWithFuzzyLogic.UiModels
         {
             _pongGame = pongGame;
             _font14 = pongGame.Content.Load<SpriteFont>("font14");
+            _font30 = pongGame.Content.Load<SpriteFont>("font30");
             _font40 = pongGame.Content.Load<SpriteFont>("font40");
         }
 
@@ -59,13 +61,13 @@ namespace PongGameWithFuzzyLogic.UiModels
             var scoreLabelPosition = new Vector2(TopPanel.Dimensions.X / 2 - 50, TopPanel.Dimensions.Y / 2 - 10);
             var labelSize = new Vector2(100, 40);
 
-            scoreValueLabel = new DefaultTextLabel(_font40, labelSize, scoreLabelPosition, _pongGame.GraphicsDevice);
+            scoreValueLabel = new DefaultTextLabel(_font30, labelSize, scoreLabelPosition, _pongGame.GraphicsDevice);
             scoreValueLabel.Text = "0:0";
 
             var descriptionLabelPosition = new Vector2(scoreLabelPosition.X, scoreLabelPosition.Y - 45);
             
-            descriptionScoreLabel = new DefaultTextLabel(_font40, labelSize, descriptionLabelPosition, _pongGame.GraphicsDevice);
-            descriptionScoreLabel.Text = "Score";
+            descriptionScoreLabel = new DefaultTextLabel(_font30, labelSize, descriptionLabelPosition, _pongGame.GraphicsDevice);
+            descriptionScoreLabel.Text = "SCORE";
         }
 
         private void AddEventListenersToButtons()
