@@ -130,3 +130,4 @@ C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogi
 C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogicTests\obj\Debug\net6.0\PongGameWithFuzzyLogicTests.pdb
 C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogicTests\obj\Debug\net6.0\PongGameWithFuzzyLogicTests.genruntimeconfig.cache
 C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogicTests\obj\Debug\net6.0\ref\PongGameWithFuzzyLogicTests.dll
+C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogicTests\bin\Debug\net6.0\Content\font30.xnb

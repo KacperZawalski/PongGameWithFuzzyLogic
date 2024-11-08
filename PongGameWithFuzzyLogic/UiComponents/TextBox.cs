@@ -24,17 +24,8 @@ namespace PongGameWithFuzzyLogic.UiComponents
         {
             _textChangedAction = action;
         }
-
-        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
-        {
-            DrawBorder(spriteBatch);
-            DrawRectangle(spriteBatch);
-            DrawText(spriteBatch);
-        }
         public override void Update(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            base.Update(gameTime, spriteBatch);
-
             HandleMouseInput();
 
             if (Focused)
@@ -46,6 +37,7 @@ namespace PongGameWithFuzzyLogic.UiComponents
             {
                 RemoveCursor();
             }
+            base.Update(gameTime, spriteBatch);
         }
 
         private void HandleMouseInput()

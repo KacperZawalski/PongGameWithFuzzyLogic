@@ -17,7 +17,7 @@ namespace PongGameWithFuzzyLogic.UiComponents
             {
                 Position = new Vector2(Position.X + value, Position.Y + value);
                 _borderWidth = value;
-                _borderTexture = new Texture2D(_graphicsDevice, (int)Dimensions.X, (int)Dimensions.Y);
+                _borderTexture = new Texture2D(_graphicsDevice, (int)Dimensions.X + _borderWidth*2, (int)Dimensions.Y + _borderWidth*2);
             }
         }
         private readonly List<Component> _children = new List<Component>();
@@ -27,8 +27,8 @@ namespace PongGameWithFuzzyLogic.UiComponents
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            DrawBorder(spriteBatch);
-            DrawRectangle(spriteBatch);
+            DrawBorder(spriteBatch, Position, BorderColor);
+            DrawRectangle(spriteBatch, Position, Color);
 
             foreach (var child in _children.Where(child => _texture.Bounds.Contains(child.Position)))
             {
@@ -46,6 +46,7 @@ namespace PongGameWithFuzzyLogic.UiComponents
             {
                 child.Update(gameTime, spriteBatch);
             }
+            base.Update(gameTime, spriteBatch);
         }
     }
 }

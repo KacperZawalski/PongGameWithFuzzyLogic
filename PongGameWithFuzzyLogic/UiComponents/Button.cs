@@ -10,12 +10,6 @@ namespace PongGameWithFuzzyLogic.UiComponents
         public Button(SpriteFont font, Vector2 dimensions, Vector2 position, GraphicsDevice graphicsDevice) : base(font, dimensions, position, graphicsDevice)
         {
         }
-        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
-        {
-            DrawBorder(spriteBatch);
-            DrawRectangle(spriteBatch);
-            DrawText(spriteBatch);
-        }
 
         public void SetClickAction(Action action)
         {
@@ -23,11 +17,11 @@ namespace PongGameWithFuzzyLogic.UiComponents
         }
         public override void Update(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            base.Update(gameTime, spriteBatch);
             if (Mouse.GetState().LeftButton == ButtonState.Pressed && IsMouseHovering())
             {
                 _clickAction?.Invoke();
             }
+            base.Update(gameTime, spriteBatch);
         }
 
     }

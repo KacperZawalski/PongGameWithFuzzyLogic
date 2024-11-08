@@ -18,10 +18,14 @@ namespace PongGameWithFuzzyLogic.UiModels
         private DefaultButton pveButton;
         private DefaultButton eveButton;
         private DefaultButton restartGameButton;
+        private DefaultButton rulesButton;
+        private DefaultButton closeRulesButton;
         private DefaultTextLabel scoreValueLabel;
         private DefaultTextLabel descriptionScoreLabel;
+        private DefaultComboBox distanceCombobox;
         public DefaultPanel TopPanel { get; internal set; }
         public DefaultPanel GamePanel { get; internal set; }
+        public DefaultPanel RulesPanel { get; internal set; }
         public ViewManager(PongGame pongGame)
         {
             _pongGame = pongGame;
@@ -33,16 +37,37 @@ namespace PongGameWithFuzzyLogic.UiModels
         public void Initialize()
         {
             CreatePanels();
+            CreateComboboxes();
             CreateButtons();
             CreateLabels();
             AddEventListenersToButtons();
             AddButtonsToPanels();
             AddLabelsToPanels();
+            AddComboboxesToPanels();
             AddPanelsToGame();
         }
+
+        private void AddComboboxesToPanels()
+        {
+            RulesPanel.Add(distanceCombobox);
+        }
+
+        private void CreateComboboxes()
+        {
+            distanceCombobox = new DefaultComboBox(_font14, new Vector2(150, 40), new Vector2(70, 260), _pongGame.GraphicsDevice);
+            distanceCombobox.Text = "xd";
+            distanceCombobox.Values = new List<string> { "a", "b", "c" };
+        }
+
         public void DrawComponents(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            _components.ForEach(component => component.Draw(gameTime, spriteBatch));
+            foreach (var component in _components)
+            {
+                if (component.Display)
+                {
+                    component.Draw(gameTime, spriteBatch);
+                }
+            }
         }
         public void UpdateComponents(GameTime gameTime, SpriteBatch spriteBatch)
         {
@@ -65,7 +90,7 @@ namespace PongGameWithFuzzyLogic.UiModels
             scoreValueLabel.Text = "0:0";
 
             var descriptionLabelPosition = new Vector2(scoreLabelPosition.X, scoreLabelPosition.Y - 45);
-            
+
             descriptionScoreLabel = new DefaultTextLabel(_font30, labelSize, descriptionLabelPosition, _pongGame.GraphicsDevice);
             descriptionScoreLabel.Text = "SCORE";
         }
@@ -93,12 +118,21 @@ namespace PongGameWithFuzzyLogic.UiModels
             {
                 _pongGame.Restart();
             });
+            rulesButton.SetClickAction(() =>
+            {
+                RulesPanel.Display = true;
+            });
+            closeRulesButton.SetClickAction(() =>
+            {
+                RulesPanel.Display = false;
+            });
         }
 
         private void AddPanelsToGame()
         {
             _components.Add(TopPanel);
             _components.Add(GamePanel);
+            _components.Add(RulesPanel);
         }
 
         private void CreatePanels()
@@ -109,6 +143,9 @@ namespace PongGameWithFuzzyLogic.UiModels
                 dimensions: new Vector2(996, _pongGame.GraphicsDevice.Viewport.Height - TopPanel.Dimensions.Y - 4),
                 position: new Vector2(0, TopPanel.Dimensions.Y),
                 _pongGame.GraphicsDevice);
+
+            RulesPanel = new DefaultPanel(new Vector2(600, 400), new Vector2(60, 200), _pongGame.GraphicsDevice);
+            RulesPanel.Display = false;
         }
 
         private void AddButtonsToPanels()
@@ -117,21 +154,30 @@ namespace PongGameWithFuzzyLogic.UiModels
             TopPanel.Add(pveButton);
             TopPanel.Add(eveButton);
             TopPanel.Add(restartGameButton);
+            TopPanel.Add(rulesButton);
+            RulesPanel.Add(closeRulesButton);
         }
 
         private void CreateButtons()
         {
-            pvpButton = new DefaultButton(_font14, new Vector2(150, 40), new Vector2(830, 10), _pongGame.GraphicsDevice);
+            var size = new Vector2(150, 40);
+            pvpButton = new DefaultButton(_font14, size, new Vector2(830, 10), _pongGame.GraphicsDevice);
             pvpButton.Text = "Player vs Player";
-            
-            pveButton = new DefaultButton(_font14, new Vector2(150, 40), new Vector2(830, 60), _pongGame.GraphicsDevice);
+
+            pveButton = new DefaultButton(_font14, size, new Vector2(830, 60), _pongGame.GraphicsDevice);
             pveButton.Text = "Player vs AI";
 
-            eveButton = new DefaultButton(_font14, new Vector2(150, 40), new Vector2(670, 60), _pongGame.GraphicsDevice);
+            eveButton = new DefaultButton(_font14, size, new Vector2(670, 60), _pongGame.GraphicsDevice);
             eveButton.Text = "AI vs AI";
 
-            restartGameButton = new DefaultButton(_font14, new Vector2(150, 40), new Vector2(670, 10), _pongGame.GraphicsDevice);
+            restartGameButton = new DefaultButton(_font14, size, new Vector2(670, 10), _pongGame.GraphicsDevice);
             restartGameButton.Text = "Restart game";
+
+            rulesButton = new DefaultButton(_font14, size, new Vector2(20, 10), _pongGame.GraphicsDevice);
+            rulesButton.Text = "AI rules";
+
+            closeRulesButton = new DefaultButton(_font14, size, new Vector2(70, 210), _pongGame.GraphicsDevice);
+            closeRulesButton.Text = "Close";
         }
 
         private void UpdateScore()

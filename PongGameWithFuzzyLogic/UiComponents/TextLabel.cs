@@ -15,18 +15,8 @@ namespace PongGameWithFuzzyLogic.UiComponents
         public int PaddingLeft { get; set; }
         public Color HoverColor { get; set; }
         public Color HoverTextColor { get; set; }
-        public Color TextColor
-        {
-            get => _textColor;
-            set
-            {
-                _textColor = value;
-                _textColorCopy = value;
-            }
-        }
+        public Color TextColor { get; set; }
         protected Action _clickAction;
-        protected Color _textColorCopy;
-        protected Color _textColor;
 
         protected Vector2 _textPosition
         {
@@ -42,57 +32,37 @@ namespace PongGameWithFuzzyLogic.UiComponents
             Font = font;
             TextPosition = TextPosition.Center;
             TextColor = Color.Black;
-            _colorCopy = Color;
-            _textColorCopy = TextColor;
         }
 
-        protected void DrawText(SpriteBatch spriteBatch)
+        protected void DrawText(SpriteBatch spriteBatch, string text, Vector2 position, Color textColor)
         {
             Vector2 newTextPosition = TextPositionFactory.CalculateTextPosition(
                 TextPosition,
                 Font,
-                Position,
+                position,
                 new Vector2(PaddingLeft, PaddingTop),
-                Text,
+                text,
                 _texture);
 
-            spriteBatch.DrawString(Font, Text, newTextPosition, _textColor);
+            spriteBatch.DrawString(Font, text, newTextPosition, textColor);
         }
         public override void Update(GameTime gameTime, SpriteBatch spritebatch)
         {
+            base.Update(gameTime, spritebatch);
+        }
+        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+            DrawBorder(spriteBatch, Position, BorderColor);
             if (IsMouseHovering())
             {
-                SetHoverStyling();
+                DrawRectangle(spriteBatch, Position, HoverColor);
+                DrawText(spriteBatch, Text, Position, HoverTextColor);
             }
             else
             {
-                SetDefaultStyling();
+                DrawRectangle(spriteBatch, Position, Color);
+                DrawText(spriteBatch, Text, Position, TextColor);
             }
-        }
-        protected bool IsMouseHovering()
-        {
-            MouseState mouseState = Mouse.GetState();
-            return Position.X < mouseState.X
-                && Position.Y < mouseState.Y
-                && Position.X + Dimensions.X > mouseState.X
-                && Position.Y + Dimensions.Y > mouseState.Y;
-        }
-        private void SetHoverStyling()
-        {
-            _color = HoverColor;
-            _textColor = HoverTextColor;
-        }
-        private void SetDefaultStyling()
-        {
-            _color = _colorCopy;
-            _textColor = _textColorCopy;
-        }
-
-        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
-        {
-            DrawBorder(spriteBatch);
-            DrawRectangle(spriteBatch);
-            DrawText(spriteBatch);
         }
     }
 }
