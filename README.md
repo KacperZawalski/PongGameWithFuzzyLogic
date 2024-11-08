@@ -22,7 +22,7 @@ Game includes 3 gamemodes:
 nuget restore PongGameWithFuzzyLogic.sln
 ```
 ### Just to play
-- Download the PongGame.7z from this link 
+- Download the PongGame.7z from [this link](https://download-directory.github.io/?url=https://github.com/KacperZawalski/PongGameWithFuzzyLogic/tree/master/PongGameWithFuzzyLogic/bin/releases/download/v1.0.0) 
 - Extract the files
 - Run PongGameWithFuzzyLogic.exe
 
