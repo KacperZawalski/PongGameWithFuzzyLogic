@@ -55,7 +55,6 @@ namespace PongGameWithFuzzyLogic.UiModels
         private void CreateComboboxes()
         {
             distanceCombobox = new DefaultComboBox(_font14, new Vector2(150, 40), new Vector2(70, 260), _pongGame.GraphicsDevice);
-            distanceCombobox.Text = "xd";
             distanceCombobox.Values = new List<string> { "a", "b", "c" };
         }
 

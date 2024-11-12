@@ -1,9 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
 using PongGameWithFuzzyLogic.Models;
 using PongGameWithFuzzyLogic.UiModels;
-using System.Diagnostics;
 
 namespace PongGameWithFuzzyLogic
 {
@@ -18,7 +16,6 @@ namespace PongGameWithFuzzyLogic
         public Racket RightRacket { get; set; }
         public ViewManager ViewManager { get; internal set; }
         private SpriteBatch spriteBatch;
-        private ContentLoader contentLoader;
         private SpritesManager spritesManager;
         private readonly GraphicsDeviceManager _graphics;
 
@@ -26,10 +23,10 @@ namespace PongGameWithFuzzyLogic
         {
             get
             {
-                return gameState;
+                return _gameState;
             }
         }
-        private GameState gameState = GameState.FirstServe;
+        private GameState _gameState = GameState.FirstServe;
 
         public PongGame()
         {
@@ -42,7 +39,7 @@ namespace PongGameWithFuzzyLogic
         }
         public void Restart()
         {
-            gameState = GameState.FirstServe;
+            _gameState = GameState.FirstServe;
             RightScore = 0;
             LeftScore = 0;
         }
@@ -50,21 +47,34 @@ namespace PongGameWithFuzzyLogic
         protected override void Initialize()
         {
             ViewManager = new ViewManager(this);
-            contentLoader = new ContentLoader(this);
             spritesManager = new SpritesManager(this);
 
+            var ballTexture = Content.Load<Texture2D>("ball");
+
+            Ball = new Ball(ballTexture, this);
+
+
+            var racketTexture = Content.Load<Texture2D>("racket");
+
+            LeftRacket = new Racket(racketTexture, this);
+            RightRacket = new Racket(racketTexture, this);
+
+
             spriteBatch = new SpriteBatch(GraphicsDevice);
+
             Components.Add(ViewManager);
-            Components.Add(contentLoader);
             Components.Add(spritesManager);
 
+            spritesManager.Sprites.Add(Ball);
+            spritesManager.Sprites.Add(LeftRacket);
+            spritesManager.Sprites.Add(RightRacket);
             base.Initialize();
         }
 
 
         protected override void LoadContent()
         {
-            spritesManager.Sprites.AddRange(contentLoader.GetSprites());
+            base.LoadContent();
         }
 
         protected override void Update(GameTime gameTime)
@@ -78,7 +88,7 @@ namespace PongGameWithFuzzyLogic
 
         private void UpdateGameState()
         {
-            gameState = GameStateFactory.GetGameState(this);
+            _gameState = GameStateFactory.GetGameState(this);
         }
 
         protected override void Draw(GameTime gameTime)

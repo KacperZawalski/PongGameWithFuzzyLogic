@@ -17,7 +17,6 @@ C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogi
 C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogic\obj\Debug\net6.0\PongGameWithFuzzyLogic.AssemblyInfoInputs.cache
 C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogic\obj\Debug\net6.0\PongGameWithFuzzyLogic.AssemblyInfo.cs
 C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogic\obj\Debug\net6.0\PongGameWithFuzzyLogic.csproj.CoreCompileInputs.cache
-C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogic\obj\Debug\net6.0\PongGameWithFuzzyLogic.csproj.CopyComplete
 C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogic\obj\Debug\net6.0\PongGameWithFuzzyLogic.dll
 C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogic\obj\Debug\net6.0\refint\PongGameWithFuzzyLogic.dll
 C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogic\obj\Debug\net6.0\PongGameWithFuzzyLogic.pdb
@@ -86,3 +85,5 @@ C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogi
 C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogic\bin\Debug\net6.0\Content\font40.xnb
 C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogic\bin\Debug\net6.0\Content\font48.xnb
 C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogic\bin\Debug\net6.0\Content\font30.xnb
+C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogic\obj\Debug\net6.0\PongGameWithFuzzyLogic.sourcelink.json
+C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogic\obj\Debug\net6.0\PongGame.60C2F74B.Up2Date
