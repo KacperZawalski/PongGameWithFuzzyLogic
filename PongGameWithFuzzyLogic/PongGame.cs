@@ -1,12 +1,24 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using PongGameWithFuzzyLogic.Models;
+using PongGameWithFuzzyLogic.Models.FuzzyLogic.Terms.MovementTerms;
+using PongGameWithFuzzyLogic.Models.FuzzyLogic.Terms;
 using PongGameWithFuzzyLogic.UiModels;
+using System.Collections.Generic;
+using PongGameWithFuzzyLogic.Models.FuzzyLogic;
 
 namespace PongGameWithFuzzyLogic
 {
     public class PongGame : Game
     {
+        public List<Rule> AIRules { get; internal set; } = new List<Rule>
+        {
+            new Rule(new VeryLongDistanceTerm(), new NoneMovementTerm()),
+            new Rule(new LongDistanceTerm(), new SlowMovementTerm()),
+            new Rule(new MediumDistanceTerm(), new FastMovementTerm()),
+            new Rule(new ShortDistanceTerm(), new VeryFastMovementTerm()),
+            new Rule(new VeryShortDistanceTerm(), new MediumMovementTerm()),
+        };
         public const int GameWindowWidth = 1000;
         public const int GameWindowHeight = 800;
         public int LeftScore { get; set; }

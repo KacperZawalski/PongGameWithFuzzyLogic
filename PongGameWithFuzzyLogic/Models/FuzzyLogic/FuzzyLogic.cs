@@ -8,8 +8,6 @@ namespace PongGameWithFuzzyLogic.Models.FuzzyLogic
 {
     public sealed class FuzzyLogic
     {
-        private readonly Vector2 _ballPos;
-        private readonly Vector2 _racketPos;
         private List<ITerm> _terms = new List<ITerm>
         {
             new VeryShortDistanceTerm(),
@@ -18,36 +16,26 @@ namespace PongGameWithFuzzyLogic.Models.FuzzyLogic
             new LongDistanceTerm(),
             new VeryLongDistanceTerm(),
         };
-        private List<Rule> _rules = new List<Rule>
-        {
-            new Rule(new VeryLongDistanceTerm(), new NoneMovementTerm()),
-            new Rule(new LongDistanceTerm(), new SlowMovementTerm()),
-            new Rule(new MediumDistanceTerm(), new FastMovementTerm()),
-            new Rule(new ShortDistanceTerm(), new VeryFastMovementTerm()),
-            new Rule(new VeryShortDistanceTerm(), new MediumMovementTerm()),
-        };
         private double[] _blurredInput;
         private double[] _inferencedInput;
         private float _output;
-        public FuzzyLogic(Vector2 ballPos, Vector2 rackerPos)
+        public FuzzyLogic()
         {
-            _ballPos = ballPos;
-            _racketPos = rackerPos;
         }
 
-        public FuzzyLogic Blurr()
+        public FuzzyLogic Blurr(Vector2 ballPos, Vector2 racketPos)
         {
-            var diff = _ballPos - _racketPos;
+            var diff = ballPos - racketPos;
             var distance = Math.Sqrt(Math.Pow(diff.X, 2) + Math.Pow(diff.Y, 2));
 
             _blurredInput = new Blurring().BlurrInput(distance, _terms);
             return this;
         }
-        public FuzzyLogic Inference()
+        public FuzzyLogic Inference(List<Rule> rules)
         {
             if (_blurredInput != null)
             {
-                _inferencedInput = new Inferencing().InferenceInput(_blurredInput, _rules, _terms);
+                _inferencedInput = new Inferencing().InferenceInput(_blurredInput, rules, _terms);
             }
             return this;
         }
@@ -59,17 +47,13 @@ namespace PongGameWithFuzzyLogic.Models.FuzzyLogic
             }
             return this;
         }
-        public float GetMovement()
+        public float GetMovement(Vector2 ballPos, Vector2 racketPos)
         {
-            if (_output != null)
+            if (ballPos.Y < racketPos.Y)
             {
-                if (_ballPos.Y < _racketPos.Y)
-                {
-                    _output *= -1;
-                }
-                return _output;
+                _output *= -1;
             }
-            return 0f;
+            return _output;
         }
     }
 }

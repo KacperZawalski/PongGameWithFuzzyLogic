@@ -4,11 +4,22 @@ using Microsoft.Xna.Framework.Input;
 using PongGameWithFuzzyLogic.Models;
 using PongGameWithFuzzyLogic.UiComponents;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace PongGameWithFuzzyLogic.UiModels
 {
     public class ViewManager : IGameComponent
     {
+        public DefaultPanel TopPanel { get; internal set; }
+        public DefaultPanel GamePanel { get; internal set; }
+        public DefaultPanel RulesPanel { get; internal set; }
+        public ViewManager(PongGame pongGame)
+        {
+            _pongGame = pongGame;
+            _font14 = pongGame.Content.Load<SpriteFont>("font14");
+            _font30 = pongGame.Content.Load<SpriteFont>("font30");
+            _font40 = pongGame.Content.Load<SpriteFont>("font40");
+        }
         private readonly PongGame _pongGame;
         private readonly List<Component> _components = new List<Component>();
         private readonly SpriteFont _font14;
@@ -22,40 +33,51 @@ namespace PongGameWithFuzzyLogic.UiModels
         private DefaultButton closeRulesButton;
         private DefaultTextLabel scoreValueLabel;
         private DefaultTextLabel descriptionScoreLabel;
-        private DefaultComboBox distanceCombobox;
-        public DefaultPanel TopPanel { get; internal set; }
-        public DefaultPanel GamePanel { get; internal set; }
-        public DefaultPanel RulesPanel { get; internal set; }
-        public ViewManager(PongGame pongGame)
-        {
-            _pongGame = pongGame;
-            _font14 = pongGame.Content.Load<SpriteFont>("font14");
-            _font30 = pongGame.Content.Load<SpriteFont>("font30");
-            _font40 = pongGame.Content.Load<SpriteFont>("font40");
-        }
 
         public void Initialize()
         {
             CreatePanels();
-            CreateComboboxes();
             CreateButtons();
             CreateLabels();
             AddEventListenersToButtons();
             AddButtonsToPanels();
             AddLabelsToPanels();
-            AddComboboxesToPanels();
+            CreateRulesPanelElements();
             AddPanelsToGame();
         }
 
-        private void AddComboboxesToPanels()
+        private void CreateRulesPanelElements()
         {
-            RulesPanel.Add(distanceCombobox);
-        }
+            Vector2 dimesions = new Vector2(220, 40);
+            Vector2 position = new Vector2(110, 210);
+            int yOffset = _pongGame.AIRules.Count * 50;
+            List<string> movementValues = new List<string>();
+            List<string> distanceValues = new List<string>();
+            for (int i = 0; i < _pongGame.AIRules.Count; i++)
+            {
+                movementValues.Add(_pongGame.AIRules[i].MovementTerm.GetType().Name);
+                distanceValues.Add(_pongGame.AIRules[i].DistanceTerm.GetType().Name);
+            }
 
-        private void CreateComboboxes()
-        {
-            distanceCombobox = new DefaultComboBox(_font14, new Vector2(150, 40), new Vector2(70, 260), _pongGame.GraphicsDevice);
-            distanceCombobox.Values = new List<string> { "a", "b", "c" };
+            for (int i = _pongGame.AIRules.Count - 1; i >= 0; i--)
+            {
+                var movementBox = new DefaultComboBox(_font14, dimesions, position + new Vector2(0, yOffset), _pongGame.GraphicsDevice, movementValues);
+                var distanceBox = new DefaultComboBox(_font14, dimesions, position + new Vector2(240, yOffset), _pongGame.GraphicsDevice, distanceValues);
+                RulesPanel.Add(movementBox);
+                RulesPanel.Add(distanceBox);
+                var deleteButton = new DefaultButton(_font14, new Vector2(40, 40), new Vector2(600, 210 + yOffset), _pongGame.GraphicsDevice);
+                deleteButton.Text = "X";
+                yOffset -= 50;
+                var ruleToRemove = _pongGame.AIRules[i];
+                deleteButton.SetClickAction(() =>
+                {
+                    _pongGame.AIRules.Remove(ruleToRemove);
+                    RulesPanel.Remove(movementBox);
+                    RulesPanel.Remove(distanceBox);
+                    RulesPanel.Remove(deleteButton);
+                });
+                RulesPanel.Add(deleteButton);
+            }
         }
 
         public void DrawComponents(GameTime gameTime, SpriteBatch spriteBatch)
@@ -143,7 +165,7 @@ namespace PongGameWithFuzzyLogic.UiModels
                 position: new Vector2(0, TopPanel.Dimensions.Y),
                 _pongGame.GraphicsDevice);
 
-            RulesPanel = new DefaultPanel(new Vector2(600, 400), new Vector2(60, 200), _pongGame.GraphicsDevice);
+            RulesPanel = new DefaultPanel(new Vector2(600, 450), new Vector2(100, 200), _pongGame.GraphicsDevice);
             RulesPanel.Display = false;
         }
 
@@ -175,7 +197,7 @@ namespace PongGameWithFuzzyLogic.UiModels
             rulesButton = new DefaultButton(_font14, size, new Vector2(20, 10), _pongGame.GraphicsDevice);
             rulesButton.Text = "AI rules";
 
-            closeRulesButton = new DefaultButton(_font14, size, new Vector2(70, 210), _pongGame.GraphicsDevice);
+            closeRulesButton = new DefaultButton(_font14, size, new Vector2(110, 210), _pongGame.GraphicsDevice);
             closeRulesButton.Text = "Close";
         }
 

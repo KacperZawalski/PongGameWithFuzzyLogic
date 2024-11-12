@@ -25,12 +25,13 @@ namespace PongGameWithFuzzyLogic.UiComponents
             }
         }
         private List<string> _values = new List<string>();
-        public ComboBox(SpriteFont font, Vector2 dimensions, Vector2 position, GraphicsDevice graphicsDevice) : base(font, dimensions, position, graphicsDevice)
+        public ComboBox(SpriteFont font, Vector2 dimensions, Vector2 position, GraphicsDevice graphicsDevice, List<string> values) : base(font, dimensions, position, graphicsDevice)
         {
             ItemsHoverColor = HoverColor;
             ItemsColor = Color;
             ItemsTextColor = TextColor;
             ItemsHoverTextColor = HoverTextColor;
+            Values = values;
         }
         public override void Update(GameTime gameTime, SpriteBatch spriteBatch)
         {
@@ -45,7 +46,8 @@ namespace PongGameWithFuzzyLogic.UiComponents
                 comboY += Dimensions.Y + BorderWidth;
                 var position = new Vector2(Position.X, comboY);
                 if (new Rectangle(position.ToPoint(), Dimensions.ToPoint()).Contains(Mouse.GetState().Position)
-                    && Mouse.GetState().LeftButton == ButtonState.Pressed)
+                    && Mouse.GetState().LeftButton == ButtonState.Pressed
+                    && DisplayComboElements)
                 {
                     DisplayComboElements = false;
                     Text = Values[i];
@@ -55,11 +57,11 @@ namespace PongGameWithFuzzyLogic.UiComponents
         }
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
+            base.Draw(gameTime, spriteBatch);
             if (DisplayComboElements)
             {
                 DisplayOptions(spriteBatch);
             }
-            base.Draw(gameTime, spriteBatch);
         }
         private void DisplayOptions(SpriteBatch spriteBatch)
         {
@@ -91,6 +93,7 @@ namespace PongGameWithFuzzyLogic.UiComponents
                 data[i] = color;
             }
             texture.SetData(data);
+            //spriteBatch.Draw(texture, position, null, color, 0f, new Vector2(), 1f, SpriteEffects.None, 1f);
             spriteBatch.Draw(texture, position, color);
         }
     }

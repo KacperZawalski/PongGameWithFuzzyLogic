@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PongGameWithFuzzyLogic")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+47736efdaff9253fb3472c31913bdbcd3f455611")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5cb6a3808e7bcdb65d694382c7a977f267944f5d")]
 [assembly: System.Reflection.AssemblyProductAttribute("PongGameWithFuzzyLogic")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PongGameWithFuzzyLogic")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
