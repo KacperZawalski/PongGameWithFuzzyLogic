@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
 using System;
 
 namespace PongGameWithFuzzyLogic.UiComponents
@@ -15,14 +14,5 @@ namespace PongGameWithFuzzyLogic.UiComponents
         {
             _clickAction = action;
         }
-        public override void Update(GameTime gameTime, SpriteBatch spriteBatch)
-        {
-            if (Mouse.GetState().LeftButton == ButtonState.Pressed && IsMouseHovering())
-            {
-                _clickAction?.Invoke();
-            }
-            base.Update(gameTime, spriteBatch);
-        }
-
     }
 }

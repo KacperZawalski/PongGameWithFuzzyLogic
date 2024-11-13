@@ -48,6 +48,10 @@ namespace PongGameWithFuzzyLogic.UiComponents
         }
         public override void Update(GameTime gameTime, SpriteBatch spritebatch)
         {
+            if (Clicked)
+            {
+                _clickAction?.Invoke();
+            }
             base.Update(gameTime, spritebatch);
         }
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)

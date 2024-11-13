@@ -2,8 +2,11 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using PongGameWithFuzzyLogic.Models;
+using PongGameWithFuzzyLogic.Models.FuzzyLogic;
 using PongGameWithFuzzyLogic.UiComponents;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
 namespace PongGameWithFuzzyLogic.UiModels
@@ -33,6 +36,9 @@ namespace PongGameWithFuzzyLogic.UiModels
         private DefaultButton closeRulesButton;
         private DefaultTextLabel scoreValueLabel;
         private DefaultTextLabel descriptionScoreLabel;
+        private List<ComboBox> _movementBoxes = new List<ComboBox>();
+        private List<ComboBox> _distanceBoxes = new List<ComboBox>();
+        private List<Button> _deleteButtons = new List<Button>();
 
         public void Initialize()
         {
@@ -69,8 +75,12 @@ namespace PongGameWithFuzzyLogic.UiModels
                 deleteButton.Text = "X";
                 yOffset -= 50;
                 var ruleToRemove = _pongGame.AIRules[i];
+                _movementBoxes.Add(movementBox);
+                _distanceBoxes.Add(distanceBox);
+                _deleteButtons.Add(deleteButton);
                 deleteButton.SetClickAction(() =>
                 {
+                    MoveBoxesUp(ruleToRemove);
                     _pongGame.AIRules.Remove(ruleToRemove);
                     RulesPanel.Remove(movementBox);
                     RulesPanel.Remove(distanceBox);
@@ -78,6 +88,25 @@ namespace PongGameWithFuzzyLogic.UiModels
                 });
                 RulesPanel.Add(deleteButton);
             }
+            _movementBoxes.Reverse();
+            _distanceBoxes.Reverse();
+            _deleteButtons.Reverse();
+        }
+
+        private void MoveBoxesUp(Rule ruleToRemove)
+        {
+            Debug.WriteLine("Deleted");
+            int index = _pongGame.AIRules.FindIndex(x => x.DistanceTerm.GetType().Name == ruleToRemove.DistanceTerm.GetType().Name);
+            Vector2 offset = new Vector2(0, -50);
+            for (int i = index; i < _pongGame.AIRules.Count; i++)
+            {
+                _deleteButtons[i].Position += offset;
+                _movementBoxes[i].Position += offset;
+                _distanceBoxes[i].Position += offset;
+            }
+            _deleteButtons.RemoveAt(index);
+            _movementBoxes.RemoveAt(index);
+            _distanceBoxes.RemoveAt(index);
         }
 
         public void DrawComponents(GameTime gameTime, SpriteBatch spriteBatch)
