@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 
 namespace PongGameWithFuzzyLogic.UiComponents
@@ -38,6 +39,10 @@ namespace PongGameWithFuzzyLogic.UiComponents
         public void Add(Component component)
         {
             _children.Add(component);
+        }
+        public void Insert(int index, Component component)
+        {
+            _children.Insert(index, component);
         }
         public void Remove(Component component)
         {
