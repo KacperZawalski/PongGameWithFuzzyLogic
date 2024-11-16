@@ -1,16 +1,17 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using PongGameWithFuzzyLogic.Models;
-using PongGameWithFuzzyLogic.Models.FuzzyLogic.Terms.MovementTerms;
+using PongGameWithFuzzyLogic.Models.FuzzyLogic;
 using PongGameWithFuzzyLogic.Models.FuzzyLogic.Terms;
+using PongGameWithFuzzyLogic.Models.FuzzyLogic.Terms.MovementTerms;
 using PongGameWithFuzzyLogic.UiModels;
 using System.Collections.Generic;
-using PongGameWithFuzzyLogic.Models.FuzzyLogic;
 
 namespace PongGameWithFuzzyLogic
 {
     public class PongGame : Game
     {
+        public int WinningScoreValue { get; } = 9;
         public List<Rule> AIRules { get; internal set; } = new List<Rule>
         {
             new Rule(new VeryLongDistanceTerm(), new NoneMovementTerm()),
@@ -92,12 +93,12 @@ namespace PongGameWithFuzzyLogic
         protected override void Update(GameTime gameTime)
         {
             UpdateGameState();
+            ScoreManager.UpdateScore(this);
             ViewManager.UpdateComponents(gameTime, spriteBatch);
             spritesManager.UpdateSprites(gameTime, spriteBatch);
 
             base.Update(gameTime);
         }
-
         private void UpdateGameState()
         {
             _gameState = GameStateFactory.GetGameState(this);

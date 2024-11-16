@@ -56,16 +56,19 @@ namespace PongGameWithFuzzyLogic.UiComponents
         }
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            DrawBorder(spriteBatch, Position, BorderColor);
-            if (IsMouseHovering())
+            if (Display)
             {
-                DrawRectangle(spriteBatch, Position, HoverColor);
-                DrawText(spriteBatch, Text, Position, HoverTextColor);
-            }
-            else
-            {
-                DrawRectangle(spriteBatch, Position, Color);
-                DrawText(spriteBatch, Text, Position, TextColor);
+                DrawBorder(spriteBatch, Position, BorderColor);
+                if (IsMouseHovering())
+                {
+                    DrawRectangle(spriteBatch, Position, HoverColor);
+                    DrawText(spriteBatch, Text, Position, HoverTextColor);
+                }
+                else
+                {
+                    DrawRectangle(spriteBatch, Position, Color);
+                    DrawText(spriteBatch, Text, Position, TextColor);
+                }
             }
         }
     }

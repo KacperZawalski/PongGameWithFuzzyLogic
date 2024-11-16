@@ -11,27 +11,35 @@ namespace PongGameWithFuzzyLogic.Models
 
             if (pongGame.Ball.Position.X <= panelLeftBorder)
             {
+                if (pongGame.RightScore >= pongGame.WinningScoreValue)
+                {
+                    return GameState.RightWon;
+                }
                 return GameState.RightScored;
             }
             else if (pongGame.Ball.Position.X >= panelRightBorder)
             {
+                if (pongGame.LeftScore >= pongGame.WinningScoreValue)
+                {
+                    return GameState.LeftWon;
+                }
                 return GameState.LeftScored;
             }
             else if (pongGame.Ball.Moving)
             {
                 return GameState.Running;
             }
-            else if (Keyboard.GetState().IsKeyDown(Keys.Space) || pongGame.LeftRacket.IsControlledByAi)
+            else if (Keyboard.GetState().IsKeyDown(Keys.Space))
             {
                 return GameState.LeftServed;
+            }
+            else if (Keyboard.GetState().IsKeyDown(Keys.Enter))
+            {
+                return GameState.RightServed;
             }
             else if (pongGame.GameState == GameState.RightScored || pongGame.GameState == GameState.WaitingForLeft)
             {
                 return GameState.WaitingForLeft;
-            }
-            else if (Keyboard.GetState().IsKeyDown(Keys.Enter) || pongGame.RightRacket.IsControlledByAi)
-            {
-                return GameState.RightServed;
             }
             else if (pongGame.GameState == GameState.LeftScored || pongGame.GameState == GameState.WaitingForRight)
             {

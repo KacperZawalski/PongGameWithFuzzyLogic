@@ -10,5 +10,7 @@
         RightServed = 5,
         WaitingForRight = 6,
         WaitingForLeft = 7,
+        LeftWon = 8,
+        RightWon = 9,
     }
 }

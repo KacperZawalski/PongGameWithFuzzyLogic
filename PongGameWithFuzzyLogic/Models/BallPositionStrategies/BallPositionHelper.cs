@@ -12,10 +12,12 @@
                     strategy = new MovingBallPositionStrategy();
                     break;
                 case GameState.LeftScored:
+                case GameState.LeftWon:
                 case GameState.WaitingForRight:
                     strategy = new RightRacketBallPositionStrategy();
                     break;
                 case GameState.RightScored:
+                case GameState.RightWon:
                 case GameState.WaitingForLeft:
                     strategy = new LeftRacketBallPositionStrategy();
                     break;
