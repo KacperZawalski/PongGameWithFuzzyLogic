@@ -4,7 +4,7 @@
     {
         public double GetMembership(double movement)
         {
-            return TermHelper.CalculateMovementTermMembership(movement, 1, 2, 3);
+            return TermHelper.CalculateMovementTermMembership(movement, 0, 1, 2);
         }
     }
 }

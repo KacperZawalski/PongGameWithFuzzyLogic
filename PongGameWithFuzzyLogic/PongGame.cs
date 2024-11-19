@@ -12,13 +12,13 @@ namespace PongGameWithFuzzyLogic
     public class PongGame : Game
     {
         public int WinningScoreValue { get; } = 9;
-        public List<Rule> AIRules { get; internal set; } = new List<Rule>
+        public List<Rule> AIRules { get; set; } = new List<Rule>
         {
-            new Rule(new VeryLongDistanceTerm(), new NoneMovementTerm()),
-            new Rule(new LongDistanceTerm(), new SlowMovementTerm()),
-            new Rule(new MediumDistanceTerm(), new FastMovementTerm()),
-            new Rule(new ShortDistanceTerm(), new VeryFastMovementTerm()),
-            new Rule(new VeryShortDistanceTerm(), new MediumMovementTerm()),
+            new Rule(new VeryLongDistanceTerm(), new NoneMovementTerm(), true),
+            new Rule(new LongDistanceTerm(), new SlowMovementTerm(), true),
+            new Rule(new MediumDistanceTerm(), new FastMovementTerm(), true),
+            new Rule(new ShortDistanceTerm(), new VeryFastMovementTerm(), true),
+            new Rule(new VeryShortDistanceTerm(), new MediumMovementTerm(), true),
         };
         public const int GameWindowWidth = 1000;
         public const int GameWindowHeight = 800;

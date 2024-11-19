@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
 using System.Collections.Generic;
 
 namespace PongGameWithFuzzyLogic.UiComponents
@@ -55,6 +56,7 @@ namespace PongGameWithFuzzyLogic.UiComponents
             }
             base.Update(gameTime, spriteBatch);
         }
+
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             base.Draw(gameTime, spriteBatch);

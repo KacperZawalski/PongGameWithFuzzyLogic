@@ -6,10 +6,12 @@ namespace PongGameWithFuzzyLogic.Models.FuzzyLogic
     {
         public ITerm MovementTerm { get; }
         public ITerm DistanceTerm { get; }
-        public Rule(ITerm distance, ITerm movement)
+        public bool Enabled { get; set; }
+        public Rule(ITerm distance, ITerm movement, bool enabled)
         {
             MovementTerm = movement;
             DistanceTerm = distance;
+            Enabled = enabled;
         }
     }
 }

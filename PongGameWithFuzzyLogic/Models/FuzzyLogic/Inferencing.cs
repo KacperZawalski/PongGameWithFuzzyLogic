@@ -22,7 +22,7 @@ namespace PongGameWithFuzzyLogic.Models.FuzzyLogic
             {
                 if (blurredInput[i] != 0)
                 {
-                    Rule ruleToApply = rules.Where(x => x.DistanceTerm.GetType().Name == terms[i].GetType().Name).FirstOrDefault();
+                    Rule ruleToApply = rules.Where(x => x.DistanceTerm.GetType().Name == terms[i].GetType().Name && x.Enabled).FirstOrDefault();
                     if (ruleToApply != null)
                     {
                         for (int j = 0; j < 90; j++)

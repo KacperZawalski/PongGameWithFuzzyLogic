@@ -3,10 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using PongGameWithFuzzyLogic.Models;
 using PongGameWithFuzzyLogic.Models.FuzzyLogic;
-using PongGameWithFuzzyLogic.Models.FuzzyLogic.Terms;
-using PongGameWithFuzzyLogic.Models.FuzzyLogic.Terms.MovementTerms;
 using PongGameWithFuzzyLogic.UiComponents;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
@@ -41,15 +38,14 @@ namespace PongGameWithFuzzyLogic.UiModels
         private DefaultButton _closeRulesButton;
         private DefaultButton _openScoresButton;
         private DefaultButton _closeScoresButton;
-        private DefaultButton _addRuleButton;
         private DefaultTextLabel _scoreValueLabel;
         private DefaultTextLabel _descriptionScoreLabel;
         private DefaultTextLabel _playerWonTextLabel;
         private DefaultTextLabel _scoresTitle;
         private DefaultTextLabel _scoresList;
         private List<ComboBox> _movementBoxes = new List<ComboBox>();
-        private List<ComboBox> _distanceBoxes = new List<ComboBox>();
-        private List<Button> _deleteButtons = new List<Button>();
+        private List<TextLabel> _distanceLabels = new List<TextLabel>();
+        private List<DefaultButton> _disableRuleButtons = new List<DefaultButton>();
         private List<string> _movementValues = new List<string>()
         {
             "NoneMovementTerm",
@@ -88,37 +84,46 @@ namespace PongGameWithFuzzyLogic.UiModels
 
             for (int i = _pongGame.AIRules.Count - 1; i >= 0; i--)
             {
-                var movementBox = new DefaultComboBox(_font14, dimesions, position + new Vector2(0, yOffset), _pongGame.GraphicsDevice, _movementValues);
-                var distanceBox = new DefaultComboBox(_font14, dimesions, position + new Vector2(240, yOffset), _pongGame.GraphicsDevice, _distanceValues);
+                var movementBox = new DefaultComboBox(_font14, dimesions, position + new Vector2(240, yOffset), _pongGame.GraphicsDevice, _movementValues);
+                var distanceLabel = new DefaultTextLabel(_font14, dimesions, position + new Vector2(0, yOffset), _pongGame.GraphicsDevice);
+
+                distanceLabel.Text = _distanceValues[i];
+
+                Vector2 disableButtonPosition = position + new Vector2(490, yOffset + 10);
+                var disableRuleButton = GenerateDisableRuleButton(disableButtonPosition, i);
+                RulesPanel.Add(disableRuleButton);
                 RulesPanel.Add(movementBox);
-                RulesPanel.Add(distanceBox);
-                var ruleToRemove = _pongGame.AIRules[i];
-                DefaultButton deleteButton = GenerateDeleteButton(ruleToRemove, movementBox, distanceBox, position + new Vector2(470, yOffset));
+                RulesPanel.Add(distanceLabel);
                 yOffset -= 50;
                 _movementBoxes.Add(movementBox);
-                _distanceBoxes.Add(distanceBox);
-                _deleteButtons.Add(deleteButton);
-
-                RulesPanel.Add(deleteButton);
+                _disableRuleButtons.Add(disableRuleButton);
+                _distanceLabels.Add(distanceLabel);
             }
+            _disableRuleButtons.Reverse();
             _movementBoxes.Reverse();
-            _distanceBoxes.Reverse();
-            _deleteButtons.Reverse();
+            _distanceLabels.Reverse();
         }
-        private void MoveBoxesUp(Rule ruleToRemove)
+
+        private DefaultButton GenerateDisableRuleButton(Vector2 position, int index)
         {
-            Debug.WriteLine("Deleted");
-            int index = _pongGame.AIRules.FindIndex(x => x.DistanceTerm.GetType().Name == ruleToRemove.DistanceTerm.GetType().Name);
-            Vector2 offset = new Vector2(0, -50);
-            for (int i = index; i < _pongGame.AIRules.Count; i++)
+            var button = new DefaultButton(_font30, new Vector2(20, 20), position, _pongGame.GraphicsDevice);
+            button.Color = Color.Green;
+            button.HoverColor = Color.LightGreen;
+            button.SetClickAction(() =>
             {
-                _deleteButtons[i].Position += offset;
-                _movementBoxes[i].Position += offset;
-                _distanceBoxes[i].Position += offset;
-            }
-            _deleteButtons.RemoveAt(index);
-            _movementBoxes.RemoveAt(index);
-            _distanceBoxes.RemoveAt(index);
+                _pongGame.AIRules[index].Enabled = !_pongGame.AIRules[index].Enabled;
+                if (_pongGame.AIRules[index].Enabled)
+                {
+                    button.Color = Color.Green;
+                    button.HoverColor = Color.LightGreen;
+                }
+                else
+                {
+                    button.Color = Color.IndianRed;
+                    button.HoverColor = Color.Red;
+                }
+            });
+            return button;
         }
 
         public void DrawComponents(GameTime gameTime, SpriteBatch spriteBatch)
@@ -136,6 +141,23 @@ namespace PongGameWithFuzzyLogic.UiModels
             UpdateScore();
             UpdateSavedScores();
             _components.ForEach(component => component.Update(gameTime, spriteBatch));
+            UpdateRulesFromComboBoxes();
+            for (int i = 0; i < _disableRuleButtons.Count; i++)
+            {
+                Debug.WriteLine(i + ": " + _pongGame.AIRules[i].Enabled);
+            }
+        }
+
+        private void UpdateRulesFromComboBoxes()
+        {
+            for (int i = 0; i < _pongGame.AIRules.Count && i < _movementBoxes.Count; i++)
+            {
+                var rule = new Rule(new DistanceTermFactory().GetTerm(_distanceLabels[i].Text),
+                    new MovementTermFactory().GetTerm(_movementBoxes[i].Text),
+                    _pongGame.AIRules[i].Enabled);
+
+                _pongGame.AIRules[i] = rule;
+            }
         }
 
         private void UpdateSavedScores()
@@ -146,7 +168,7 @@ namespace PongGameWithFuzzyLogic.UiModels
                 string[] scores = ScoreManager.RetrieveScores();
                 for (int i = 0; i < scores.Length / 2; i++)
                 {
-                    sb.AppendLine($"{i+1}. {scores[i]}          {scores.Length/2 + i + 1}. {scores[scores.Length/2 + i + 1]}");
+                    sb.AppendLine($"{i + 1}. {scores[i]}          {scores.Length / 2 + i + 1}. {scores[scores.Length / 2 + i + 1]}");
                 }
                 _scoresList.Text = sb.ToString();
             }
@@ -180,7 +202,7 @@ namespace PongGameWithFuzzyLogic.UiModels
             _playerWonTextLabel.HoverTextColor = Color.Green;
             _playerWonTextLabel.Display = false;
 
-            var scoresTitlePosition = new Vector2(GamePanel.Dimensions.X/2 - 100, ScoresPanel.Position.Y + 10);
+            var scoresTitlePosition = new Vector2(GamePanel.Dimensions.X / 2 - 100, ScoresPanel.Position.Y + 10);
             _scoresTitle = new DefaultTextLabel(_font30, new Vector2(200, 80), scoresTitlePosition, _pongGame.GraphicsDevice);
             _scoresTitle.Text = $"Scores of last {ScoreManager.NumberOfSavedScores} games";
 
@@ -219,13 +241,6 @@ namespace PongGameWithFuzzyLogic.UiModels
             {
                 RulesPanel.Display = false;
             });
-            _addRuleButton.SetClickAction(() =>
-            {
-                if (_pongGame.AIRules.Count < 5)
-                {
-                    AddRuleElements();
-                }
-            });
             _openScoresButton.SetClickAction(() =>
             {
                 ScoresPanel.Display = true;
@@ -235,48 +250,6 @@ namespace PongGameWithFuzzyLogic.UiModels
                 ScoresPanel.Display = false;
             });
         }
-
-        private void AddRuleElements()
-        {
-            Vector2 dimesions = new Vector2(220, 40);
-            Vector2 position = new Vector2(110, 210);
-            int yOffset = (_pongGame.AIRules.Count + 1) * 50;
-
-            var movementBox = new DefaultComboBox(_font14, dimesions, position + new Vector2(0, yOffset), _pongGame.GraphicsDevice, _movementValues);
-            var distanceBox = new DefaultComboBox(_font14, dimesions, position + new Vector2(240, yOffset), _pongGame.GraphicsDevice, _distanceValues);
-            RulesPanel.Insert(0, movementBox);
-            RulesPanel.Insert(0, distanceBox);
-            var rule = new Rule(new VeryShortDistanceTerm(), new NoneMovementTerm());
-            var deleteButton = GenerateDeleteButton(rule, movementBox, distanceBox, position + new Vector2(470, yOffset));
-
-            _movementBoxes.Add(movementBox);
-            _distanceBoxes.Add(distanceBox);
-            _deleteButtons.Add(deleteButton);
-
-            RulesPanel.Add(deleteButton);
-            _pongGame.AIRules.Add(rule);
-        }
-
-        private DefaultButton GenerateDeleteButton(Rule ruleToRemove, DefaultComboBox movementBox, DefaultComboBox distanceBox, Vector2 position)
-        {
-            var deleteButton = new DefaultButton(_font14, new Vector2(40, 40), position, _pongGame.GraphicsDevice);
-
-            deleteButton.Text = "X";
-            deleteButton.TextColor = Color.Red;
-            deleteButton.HoverColor = Color.Red;
-            deleteButton.HoverTextColor = Color.White;
-            deleteButton.BorderColor = Color.Red;
-            deleteButton.SetClickAction(() =>
-            {
-                MoveBoxesUp(ruleToRemove);
-                _pongGame.AIRules.Remove(ruleToRemove);
-                RulesPanel.Remove(movementBox);
-                RulesPanel.Remove(distanceBox);
-                RulesPanel.Remove(deleteButton);
-            });
-            return deleteButton;
-        }
-
         private void AddPanelsToGame()
         {
             _components.Add(TopPanel);
@@ -297,7 +270,7 @@ namespace PongGameWithFuzzyLogic.UiModels
             RulesPanel = new DefaultPanel(new Vector2(600, 450), new Vector2(100, 200), _pongGame.GraphicsDevice);
             RulesPanel.Display = false;
 
-            ScoresPanel = new DefaultPanel(new Vector2(500, 500), new Vector2(GamePanel.Dimensions.X/2 - 250, 200), _pongGame.GraphicsDevice);
+            ScoresPanel = new DefaultPanel(new Vector2(500, 500), new Vector2(GamePanel.Dimensions.X / 2 - 250, 200), _pongGame.GraphicsDevice);
             ScoresPanel.Display = false;
         }
 
@@ -310,7 +283,6 @@ namespace PongGameWithFuzzyLogic.UiModels
             TopPanel.Add(_rulesButton);
             TopPanel.Add(_openScoresButton);
             RulesPanel.Add(_closeRulesButton);
-            RulesPanel.Add(_addRuleButton);
             ScoresPanel.Add(_closeScoresButton);
         }
 
@@ -334,9 +306,6 @@ namespace PongGameWithFuzzyLogic.UiModels
 
             _closeRulesButton = new DefaultButton(_font14, size, new Vector2(110, 210), _pongGame.GraphicsDevice);
             _closeRulesButton.Text = "Close";
-
-            _addRuleButton = new DefaultButton(_font14, size, new Vector2(500, 600), _pongGame.GraphicsDevice);
-            _addRuleButton.Text = "Add";
 
             _openScoresButton = new DefaultButton(_font14, size, new Vector2(20, 60), _pongGame.GraphicsDevice);
             _openScoresButton.Text = "Scores";
