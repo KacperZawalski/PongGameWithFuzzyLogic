@@ -8,6 +8,7 @@ namespace PongGameWithFuzzyLogic.Models.BallPositionStrategies
         {
             ball.Position = new Vector2(pongGame.RightRacket.Position.X - ball.Rectangle.Width, pongGame.RightRacket.Rectangle.Center.Y - ball.Rectangle.Width / 2);
             ball.Moving = false;
+            ball.SetDefaultVelocity();
         }
     }
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/Kornik/Desktop/Projects/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/font30.spritefont</SourceFile>
-  <SourceTime>2024-12-21T19:27:32.7762505+01:00</SourceTime>
-  <DestFile>C:/Users/Kornik/Desktop/Projects/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/bin/DesktopGL/Content/font30.xnb</DestFile>
-  <DestTime>2024-12-21T19:28:38.560125+01:00</DestTime>
+  <SourceFile>C:/Users/Kacper/Desktop/Projekty/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/font30.spritefont</SourceFile>
+  <SourceTime>2024-11-03T03:34:37.1641564+01:00</SourceTime>
+  <DestFile>C:/Users/Kacper/Desktop/Projekty/C#/PongGameWithFuzzyLogic/PongGameWithFuzzyLogic/Content/bin/DesktopGL/Content/font30.xnb</DestFile>
+  <DestTime>2025-02-12T11:06:23.9556789+01:00</DestTime>
   <Importer>FontDescriptionImporter</Importer>
   <ImporterTime>2022-07-26T13:44:56+02:00</ImporterTime>
   <Processor>FontDescriptionProcessor</Processor>

@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using PongGameWithFuzzyLogic.Models.BallPositionStrategies;
+using System;
 
 namespace PongGameWithFuzzyLogic.Models
 {
@@ -22,6 +23,11 @@ namespace PongGameWithFuzzyLogic.Models
         public override void Update(GameTime gameTime, SpriteBatch spriteBatch)
         {
             BallPositionHelper.SetBallPosition(this, _pongGame);
+        }
+
+        internal void SetDefaultVelocity()
+        {
+            Velocity = 5f;
         }
     }
 }

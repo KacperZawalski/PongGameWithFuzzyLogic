@@ -7,11 +7,11 @@
         {
             switch (distance)
             {
-                case >= 80 and < 100:
+                case >= 50 and < 70:
                     return TermHelper.CalculateAscendingSlope(80, 100, distance);
-                case >= 100 and < 200:
+                case >= 70 and < 170:
                     return 1d;
-                case >= 200 and < 220:
+                case >= 170 and < 200:
                     return TermHelper.CalculateDescendingSlope(200, 220, distance);
                 default:
                     return 0d;

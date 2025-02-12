@@ -85,6 +85,7 @@ namespace PongGameWithFuzzyLogic.UiModels
             for (int i = _pongGame.AIRules.Count - 1; i >= 0; i--)
             {
                 var movementBox = new DefaultComboBox(_font14, dimesions, position + new Vector2(240, yOffset), _pongGame.GraphicsDevice, _movementValues);
+                movementBox.SetActiveValue(4);
                 var distanceLabel = new DefaultTextLabel(_font14, dimesions, position + new Vector2(0, yOffset), _pongGame.GraphicsDevice);
 
                 distanceLabel.Text = _distanceValues[i];

@@ -1,13 +1,14 @@
 ﻿using Microsoft.Xna.Framework;
 using PongGameWithFuzzyLogic.Models.FuzzyLogic.Terms;
-using PongGameWithFuzzyLogic.Models.FuzzyLogic.Terms.MovementTerms;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace PongGameWithFuzzyLogic.Models.FuzzyLogic
 {
     public sealed class FuzzyLogic
     {
+        private const float _movementMultiplier = 2f;
         private List<ITerm> _terms = new List<ITerm>
         {
             new VeryShortDistanceTerm(),
@@ -25,8 +26,7 @@ namespace PongGameWithFuzzyLogic.Models.FuzzyLogic
 
         public FuzzyLogic Blurr(Vector2 ballPos, Vector2 racketPos)
         {
-            var diff = ballPos - racketPos;
-            var distance = Math.Sqrt(Math.Pow(diff.X, 2) + Math.Pow(diff.Y, 2));
+            var distance = ballPos.X - racketPos.X;
 
             _blurredInput = new Blurring().BlurrInput(distance, _terms);
             return this;
@@ -49,6 +49,14 @@ namespace PongGameWithFuzzyLogic.Models.FuzzyLogic
         }
         public float GetMovement(Vector2 ballPos, Vector2 racketPos)
         {
+            _output *= _movementMultiplier;
+            var difference = Math.Abs(ballPos.Y - racketPos.Y);
+            Debug.WriteLine("Diff:" + difference);
+            Debug.WriteLine("Output: " + _output);
+            if (difference - Math.Abs(_output) < 0)
+            {
+                _output = difference;
+            }
             if (ballPos.Y < racketPos.Y)
             {
                 _output *= -1;
