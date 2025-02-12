@@ -30,6 +30,7 @@ namespace PongGameWithFuzzyLogic.Models.BallPositionStrategies
             if (ball.Rectangle.Intersects(racketRectangle))
             {
                 int rand = new Random().Next(-8, 8);
+                ball.Velocity = ball.Velocity * 1.1f;
                 ball.Direction = new Vector2(ball.Velocity * velocityInverter, rand);
             }
         }

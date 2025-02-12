@@ -9,7 +9,7 @@ namespace PongGameWithFuzzyLogic.Models
         public bool Moving { get; set; }
         public float Diameter => Rectangle.Width;
         public float Radius => Rectangle.Width / 2;
-        public int Velocity { get; } = 5;
+        public float Velocity { get; set; } = 5;
         public Vector2 Direction { get; set; }
         private readonly PongGame _pongGame;
         public Ball(Texture2D texture, PongGame pongGame) : base(texture)
