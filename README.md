@@ -1,7 +1,7 @@
 # Pong game with fuzzy logic
 Pong game created using MonoGame library for C#. UI is my custom made set of components, AI controlling rackets was implemented based on the idea of fuzzy logic.
 
-![obraz](https://github.com/user-attachments/assets/63879e75-dcd3-4bce-89b1-c9a2933dfd7e)
+![Untitled](https://github.com/user-attachments/assets/e1d73bf9-97b3-4106-968e-247130cd8167)
 
 ## Features
 Game includes features such as:
