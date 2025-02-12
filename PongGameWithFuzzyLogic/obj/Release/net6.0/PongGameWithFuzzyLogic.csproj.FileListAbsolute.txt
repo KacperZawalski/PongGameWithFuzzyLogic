@@ -43,7 +43,3 @@ C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogi
 C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogic\obj\Release\net6.0\ref\PongGameWithFuzzyLogic.dll
 C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogic\obj\Release\net6.0\PongGameWithFuzzyLogic.sourcelink.json
 C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogic\obj\Release\net6.0\PongGame.60C2F74B.Up2Date
-C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogic\bin\Release\net6.0\PongGameWithFuzzyLogic.dll.manifest
-C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogic\bin\Release\net6.0\PongGameWithFuzzyLogic.application
-C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogic\obj\Release\net6.0\PongGameWithFuzzyLogic.dll.manifest
-C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogic\obj\Release\net6.0\PongGameWithFuzzyLogic.application

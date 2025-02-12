@@ -51,8 +51,6 @@ namespace PongGameWithFuzzyLogic.Models.FuzzyLogic
         {
             _output *= _movementMultiplier;
             var difference = Math.Abs(ballPos.Y - racketPos.Y);
-            Debug.WriteLine("Diff:" + difference);
-            Debug.WriteLine("Output: " + _output);
             if (difference - Math.Abs(_output) < 0)
             {
                 _output = difference;
