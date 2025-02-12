@@ -142,10 +142,6 @@ namespace PongGameWithFuzzyLogic.UiModels
             UpdateSavedScores();
             _components.ForEach(component => component.Update(gameTime, spriteBatch));
             UpdateRulesFromComboBoxes();
-            for (int i = 0; i < _disableRuleButtons.Count; i++)
-            {
-                Debug.WriteLine(i + ": " + _pongGame.AIRules[i].Enabled);
-            }
         }
 
         private void UpdateRulesFromComboBoxes()

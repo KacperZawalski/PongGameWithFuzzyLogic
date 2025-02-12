@@ -87,3 +87,4 @@ C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogi
 C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogic\bin\Debug\net6.0\Content\font30.xnb
 C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogic\obj\Debug\net6.0\PongGameWithFuzzyLogic.sourcelink.json
 C:\Users\Kacper\Desktop\Projekty\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogic\obj\Debug\net6.0\PongGame.60C2F74B.Up2Date
+C:\Users\Kornik\Desktop\Projects\C#\PongGameWithFuzzyLogic\PongGameWithFuzzyLogic\bin\Debug\net6.0\Content\font30.xnb
