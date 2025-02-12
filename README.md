@@ -8,7 +8,7 @@ Game includes features such as:
  - Counting score
  - Possibility of resetting the game
  - Selection of gamemodes
- - Editing rules used in fuzzy logic (coming soon)
+ - Editing rules used in fuzzy logic
 ## Gamemodes
 Game includes 3 gamemodes: 
   - Player vs Player
