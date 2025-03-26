@@ -26,7 +26,7 @@ namespace PongGameWithFuzzyLogic.Models.FuzzyLogic
 
         public FuzzyLogic Blurr(Vector2 ballPos, Vector2 racketPos)
         {
-            var distance = ballPos.X - racketPos.X;
+            var distance = Math.Abs(ballPos.X - racketPos.X);
 
             _blurredInput = new Blurring().BlurrInput(distance, _terms);
             return this;
