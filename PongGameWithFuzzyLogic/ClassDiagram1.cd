@@ -1,0 +1,481 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PongGameWithFuzzyLogic.Models.BallPositionStrategies.BallPositionHelper">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\BallPositionStrategies\BallPositionHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.Models.BallPositionStrategies.LeftRacketBallPositionStrategy" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\BallPositionStrategies\LeftRacketBallPositionStrategy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.Models.BallPositionStrategies.LeftServedBallPositionStrategy" BaseTypeListCollapsed="true">
+    <Position X="18" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\BallPositionStrategies\LeftServedBallPositionStrategy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.Models.BallPositionStrategies.MovingBallPositionStrategy" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Models\BallPositionStrategies\MovingBallPositionStrategy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.Models.BallPositionStrategies.RightRacketBallPositionStrategy" BaseTypeListCollapsed="true">
+    <Position X="23.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\BallPositionStrategies\RightRacketBallPositionStrategy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.Models.BallPositionStrategies.RightServedBallPositionStrategy" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\BallPositionStrategies\RightServedBallPositionStrategy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.Models.FuzzyLogic.Terms.LongDistanceTerm" BaseTypeListCollapsed="true">
+    <Position X="21.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\FuzzyLogic\Terms\DIstanceTerms\LongDistanceTerm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.Models.FuzzyLogic.Terms.MediumDistanceTerm" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="23.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\FuzzyLogic\Terms\DIstanceTerms\MediumDistanceTerm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.Models.FuzzyLogic.Terms.ShortDistanceTerm" BaseTypeListCollapsed="true">
+    <Position X="21.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\FuzzyLogic\Terms\DIstanceTerms\ShortDistanceTerm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.Models.FuzzyLogic.Terms.VeryLongDistanceTerm" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\FuzzyLogic\Terms\DIstanceTerms\VeryLongDistanceTerm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.Models.FuzzyLogic.Terms.VeryShortDistanceTerm" BaseTypeListCollapsed="true">
+    <Position X="21.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\FuzzyLogic\Terms\DIstanceTerms\VeryShortDistanceTerm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.Models.FuzzyLogic.Terms.TermHelper">
+    <Position X="14.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\FuzzyLogic\Terms\TermHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.Models.FuzzyLogic.Terms.MovementTerms.FastMovementTerm" BaseTypeListCollapsed="true">
+    <Position X="21.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\FuzzyLogic\Terms\MovementTerms\FastMovementTerm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.Models.FuzzyLogic.Terms.MovementTerms.MediumMovementTerm" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\FuzzyLogic\Terms\MovementTerms\MediumMovementTerm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.Models.FuzzyLogic.Terms.MovementTerms.NoneMovementTerm" BaseTypeListCollapsed="true">
+    <Position X="18" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\FuzzyLogic\Terms\MovementTerms\NoneMovementTerm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.Models.FuzzyLogic.Terms.MovementTerms.SlowMovementTerm" BaseTypeListCollapsed="true">
+    <Position X="23.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\FuzzyLogic\Terms\MovementTerms\SlowMovementTerm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.Models.FuzzyLogic.Terms.MovementTerms.VeryFastMovementTerm" BaseTypeListCollapsed="true">
+    <Position X="18" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\FuzzyLogic\Terms\MovementTerms\VeryFastMovementTerm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.Models.FuzzyLogic.Terms.MovementTerms.VerySlowMovementTerm" BaseTypeListCollapsed="true">
+    <Position X="23.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\FuzzyLogic\Terms\MovementTerms\VerySlowMovementTerm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.Models.FuzzyLogic.AiControls">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAEAAAAAAAAAAQAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Models\FuzzyLogic\AiControls.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.Models.FuzzyLogic.Blurring">
+    <Position X="16.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\FuzzyLogic\Blurring.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.Models.FuzzyLogic.FuzzyLogic">
+    <Position X="23.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAACAAQAACACAAAABgAAAAAAAAAEAAABAA=</HashCode>
+      <FileName>Models\FuzzyLogic\FuzzyLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.Models.FuzzyLogic.Inferencing">
+    <Position X="14.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Models\FuzzyLogic\Inferencing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.Models.FuzzyLogic.Rule">
+    <Position X="16.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAKAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\FuzzyLogic\Rule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.Models.FuzzyLogic.Sharpening">
+    <Position X="19.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\FuzzyLogic\Sharpening.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.Models.Ball">
+    <Position X="3.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIAAAAAAAAAAAAACAAAAAAAQAAAAgAAAABAAAEIAA=</HashCode>
+      <FileName>Models\Ball.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.Models.DistanceTermFactory" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DistanceTermFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.Models.GameStateFactory" Collapsed="true">
+    <Position X="12.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\GameStateFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.Models.MovementTermFactory" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\MovementTermFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.Models.Racket">
+    <Position X="1" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAAAAAAAAAAAAAAAAAAAEKAQAAAAAAQAAAAAAgAAA=</HashCode>
+      <FileName>Models\Racket.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.Models.RacketControls">
+    <Position X="21.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAQAAAAAAAAAAAiAAAAA=</HashCode>
+      <FileName>Models\RacketControls.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.Models.ScoreManager">
+    <Position X="18" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAoAAACAAAAAAAAAAAgAAAkAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ScoreManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.Models.Sprite">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAgAgAAIAAAAAAAAgAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Models\Sprite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.Models.SpritesManager" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAACAgAAAAQAAAAAAAAABAQAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Models\SpritesManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.UiComponents.Helpers.KeyboardInputHelper">
+    <Position X="19.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAACAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UiComponents\Helpers\KeyboardInputHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.UiComponents.Helpers.TextPositionFactory">
+    <Position X="16.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UiComponents\Helpers\TextPositionHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.UiComponents.Strategies.KeyboardInputCharacterStrategy" BaseTypeListCollapsed="true">
+    <Position X="18" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UiComponents\Strategies\KeyboardInputStrategies.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.UiComponents.Strategies.KeyboardInputNumberStrategy" BaseTypeListCollapsed="true">
+    <Position X="23.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UiComponents\Strategies\KeyboardInputStrategies.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.UiComponents.Strategies.KeyboardInputBackStrategy" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UiComponents\Strategies\KeyboardInputStrategies.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.UiComponents.Strategies.KeyboardInputLeftArrowStrategy" BaseTypeListCollapsed="true">
+    <Position X="21.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UiComponents\Strategies\KeyboardInputStrategies.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.UiComponents.Strategies.KeyboardInputRightArrowStrategy" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UiComponents\Strategies\KeyboardInputStrategies.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.UiComponents.Strategies.KeyboardWrongInputStrategy" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UiComponents\Strategies\KeyboardInputStrategies.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.UiComponents.Strategies.LeftTextPositionStrategy" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UiComponents\Strategies\TextPositionStrategies.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.UiComponents.Strategies.RightTextPositionStrategy" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UiComponents\Strategies\TextPositionStrategies.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.UiComponents.Strategies.CenterTextPositionStrategy" BaseTypeListCollapsed="true">
+    <Position X="18" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UiComponents\Strategies\TextPositionStrategies.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.UiComponents.Button">
+    <Position X="4.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UiComponents\Button.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.UiComponents.ComboBox">
+    <Position X="5.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAABAgAAAMAAAAAAAAAAAQAAIAAgQAAAICA=</HashCode>
+      <FileName>UiComponents\ComboBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.UiComponents.Component">
+    <Position X="6" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEAAAQYQAIAgAgAAAAAQJCAEBAACAAAAAAiAAAAAI=</HashCode>
+      <FileName>UiComponents\Component.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.UiComponents.Panel">
+    <Position X="1.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYQAEAAAAAAAgAAAAAABAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UiComponents\Panel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.UiComponents.TextBox">
+    <Position X="10.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQiFABAAAIAgAAAAAEAAAABAAAAAAAAAAAAAIAAQAA=</HashCode>
+      <FileName>UiComponents\TextBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.UiComponents.TextLabel">
+    <Position X="8" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAgQpAEAAAAAAAACAAAAAAAAACAAiAII=</HashCode>
+      <FileName>UiComponents\TextLabel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.UiModels.DefaultButton">
+    <Position X="3.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UiModels\DefaultButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.UiModels.DefaultComboBox">
+    <Position X="5.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UiModels\DefaultComboBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.UiModels.DefaultPanel">
+    <Position X="0.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UiModels\DefaultPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.UiModels.DefaultTextBox">
+    <Position X="10.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UiModels\DefaultTextBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.UiModels.DefaultTextLabel">
+    <Position X="8" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UiModels\DefaultTextLabel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.UiModels.ViewManager" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACCAAgIQiAIkKUBCASWAQAIwAwAAAAJAABIAAiIQCIg=</HashCode>
+      <FileName>UiModels\ViewManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PongGameWithFuzzyLogic.PongGame">
+    <Position X="19.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAEACABAEAwAABAAAAEAAkAAEAgAKAAAAAAAIIIQ=</HashCode>
+      <FileName>PongGame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="PongGameWithFuzzyLogic.Models.BallPositionStrategies.IBallPositionStrategy">
+    <Position X="12.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\BallPositionStrategies\IBallPositionStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PongGameWithFuzzyLogic.Models.FuzzyLogic.Terms.ITerm">
+    <Position X="16.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\FuzzyLogic\Terms\ITerm.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PongGameWithFuzzyLogic.Models.ITermFactory">
+    <Position X="18" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ITermFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PongGameWithFuzzyLogic.UiComponents.Interfaces.IKeyboardInputStrategy">
+    <Position X="14.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UiComponents\Interfaces\IKeyboardInputStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PongGameWithFuzzyLogic.UiComponents.Interfaces.ITextPositionStrategy">
+    <Position X="19.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UiComponents\Interfaces\ITextPositionStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="PongGameWithFuzzyLogic.Models.GameState">
+    <Position X="12.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAIAAAQAAAAAAAAQAAAAAAAAAAAAAAAIBAAAAQAQAAA=</HashCode>
+      <FileName>Models\GameStates.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PongGameWithFuzzyLogic.UiComponents.TextPosition">
+    <Position X="14.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAIAAA=</HashCode>
+      <FileName>UiComponents\TextPosition.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

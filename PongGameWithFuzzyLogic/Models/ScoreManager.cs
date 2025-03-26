@@ -26,6 +26,10 @@ namespace PongGameWithFuzzyLogic.Models
 
         public static string[] RetrieveScores()
         {
+            if (!File.Exists(_path))
+            {
+                File.Create(_path);
+            }
             return File.ReadAllLines(_path);
         }
         private static string PrepareScore(PongGame pongGame)

@@ -1,7 +1,4 @@
-﻿using System.Diagnostics;
-using System.Text;
-
-namespace PongGameWithFuzzyLogic.Models.FuzzyLogic
+﻿namespace PongGameWithFuzzyLogic.Models.FuzzyLogic
 {
     public sealed class Sharpening
     {
@@ -14,7 +11,7 @@ namespace PongGameWithFuzzyLogic.Models.FuzzyLogic
                 sum += inferencedInput[i] * (i + 1);
                 divisor += inferencedInput[i];
             }
-            return (float) (sum / divisor) / 10;
+            return (float)(sum / divisor) / 10;
         }
     }
 }

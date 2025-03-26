@@ -8,7 +8,8 @@ namespace PongGameWithFuzzyLogic.Models
         public Texture2D Texture { get; internal set; }
         public float Scale { get; set; } = 1f;
         public Vector2 Position { get; set; }
-        public Rectangle Rectangle => new((int)Position.X, (int)Position.Y, (int)(Texture.Width * Scale), (int)(Texture.Height * Scale));
+        public Rectangle Rectangle => 
+            new((int)Position.X, (int)Position.Y, (int)(Texture.Width * Scale), (int)(Texture.Height * Scale));
         protected Sprite(Texture2D texture)
         {
             Texture = texture;

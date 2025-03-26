@@ -165,7 +165,12 @@ namespace PongGameWithFuzzyLogic.UiModels
                 string[] scores = ScoreManager.RetrieveScores();
                 for (int i = 0; i < scores.Length / 2; i++)
                 {
-                    sb.AppendLine($"{i + 1}. {scores[i]}          {scores.Length / 2 + i + 1}. {scores[scores.Length / 2 + i + 1]}");
+                    sb.Append($"{i + 1}. {scores[i]}");
+                    if (scores.Length / 2 + i + 1 < scores.Length)
+                    { 
+                        sb.Append($"     { scores.Length / 2 + i + 1}. { scores[scores.Length / 2 + i + 1]} ");
+                    }
+                    sb.AppendLine("");
                 }
                 _scoresList.Text = sb.ToString();
             }

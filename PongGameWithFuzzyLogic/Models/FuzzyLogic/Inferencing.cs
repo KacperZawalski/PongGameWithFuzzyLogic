@@ -27,7 +27,7 @@ namespace PongGameWithFuzzyLogic.Models.FuzzyLogic
                     {
                         for (int j = 0; j < 90; j++)
                         {
-                            slicedGraphs[i][j] = Math.Min(blurredInput[i], ruleToApply.MovementTerm.GetMembership((j + 1) / 10));
+                            slicedGraphs[i][j] = Math.Min(blurredInput[i], ruleToApply.MovementTerm.GetMembership((double)(j + 1) / 10));
                         }
                     }
                 }
