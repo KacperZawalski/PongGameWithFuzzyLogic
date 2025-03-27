@@ -22,8 +22,6 @@ Game includes 3 gamemodes:
 nuget restore PongGameWithFuzzyLogic.sln
 ```
 ### Just to play
-- Download the folder from [this link](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FKacperZawalski%2FPongGameWithFuzzyLogic%2Ftree%2Fmaster%2FPongGameWithFuzzyLogic%2Fbin%2FRelease)
-- Run setup located in Setup folder
+- Download and run this [file](https://github.com/KacperZawalski/PongGameWithFuzzyLogic/blob/master/PongGameWithFuzzyLogic/bin/Release/Setup/setup.exe)
 - Wizard will guide you through installation
-- If application doesn't run, try installing .NET framework on your machine
 
